@@ -28,27 +28,27 @@ ${{bemName}}__footer--Color: #000 !default;
   display: block;
   padding: ${{bemName}}--Padding;
   margin: 0;
-  color: ${{bemName}}--Color;
-  background-color: ${{bemName}}--BackgroundColor;
   border: ${{bemName}}--Border;
+  background-color: ${{bemName}}--BackgroundColor;
+  color: ${{bemName}}--Color;
 
   // module sections
   &__header {
     padding: ${{bemName}}__header--Padding;
-    color: ${{bemName}}__header--Color;
-    background-color: ${{bemName}}__header--BackgroundColor;
     border: ${{bemName}}__header--Border;
+    background-color: ${{bemName}}__header--BackgroundColor;
+    color: ${{bemName}}__header--Color;
   }
   &__body {
     padding: ${{bemName}}__body--Padding;
-    color: ${{bemName}}__body--Color;
-    background-color: ${{bemName}}__body--BackgroundColor;
     border: ${{bemName}}__body--Border;
+    background-color: ${{bemName}}__body--BackgroundColor;
+    color: ${{bemName}}__body--Color;
   }
   &__footer {
     padding: ${{bemName}}__footer--Padding;
-    color: ${{bemName}}__footer--Color;
-    background-color: ${{bemName}}__footer--BackgroundColor;
     border: ${{bemName}}__footer--Border;
+    background-color: ${{bemName}}__footer--BackgroundColor;
+    color: ${{bemName}}__footer--Color;
   }
 }
