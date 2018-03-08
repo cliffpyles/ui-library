@@ -183,4 +183,13 @@
     height: 250px;
   }
 }
+
+.is-vertical-nav-page {
+  .Example__section.is-preview .Example__section__body {
+    padding: 0;
+  }
+  .pf-c-vertical-nav {
+    min-height: 400px;
+  }
+}
 /* stylelint-enable */

@@ -1,0 +1,81 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$pf-c-vertical-nav--Padding: $unit-s !default;
+$pf-c-vertical-nav--Border: 1px solid #000 !default;
+$pf-c-vertical-nav--BackgroundColor: #fff !default;
+$pf-c-vertical-nav--Color: #000 !default;
+
+$pf-c-vertical-nav__items--Padding: $unit-s !default;
+$pf-c-vertical-nav__items--Border: 1px solid #000 !default;
+$pf-c-vertical-nav__items--BackgroundColor: #fff !default;
+$pf-c-vertical-nav__items--Color: #000 !default;
+
+$pf-c-vertical-nav__item--Padding: $unit-s !default;
+$pf-c-vertical-nav__item--Border: 1px solid #000 !default;
+$pf-c-vertical-nav__item--BackgroundColor: #fff !default;
+$pf-c-vertical-nav__item--Color: #000 !default;
+
+$pf-c-vertical-nav__group--Padding: $unit-s !default;
+$pf-c-vertical-nav__group--Border: 1px solid #000 !default;
+$pf-c-vertical-nav__group--BackgroundColor: #fff !default;
+$pf-c-vertical-nav__group--Color: #000 !default;
+
+$pf-c-vertical-nav__secondary-menu--Padding: $unit-s !default;
+$pf-c-vertical-nav__secondary-menu--Border: 1px solid #000 !default;
+$pf-c-vertical-nav__secondary-menu--BackgroundColor: #fff !default;
+$pf-c-vertical-nav__secondary-menu--Color: #000 !default;
+
+$pf-c-vertical-nav__tertiary-menu--Padding: $unit-s !default;
+$pf-c-vertical-nav__tertiary-menu--Border: 1px solid #000 !default;
+$pf-c-vertical-nav__tertiary-menu--BackgroundColor: #fff !default;
+$pf-c-vertical-nav__tertiary-menu--Color: #000 !default;
+
+.pf-c-vertical-nav {
+  margin: 0;
+  padding: $pf-c-vertical-nav--Padding;
+  border: $pf-c-vertical-nav--Border;
+  background-color: $pf-c-vertical-nav--BackgroundColor;
+  color: $pf-c-vertical-nav--Color;
+
+  &__items {
+    list-style-type: none;
+    margin: 0;
+    padding: $pf-c-vertical-nav__items--Padding;
+    border: $pf-c-vertical-nav__items--Border;
+    background-color: $pf-c-vertical-nav__items--BackgroundColor;
+    color: $pf-c-vertical-nav__items--Color;
+  }
+  &__item {
+    padding: $pf-c-vertical-nav__item--Padding;
+    border: $pf-c-vertical-nav__item--Border;
+    background-color: $pf-c-vertical-nav__item--BackgroundColor;
+    color: $pf-c-vertical-nav__item--Color;
+  }
+
+  &__group {
+    padding: $pf-c-vertical-nav__group--Padding;
+    border: $pf-c-vertical-nav__group--Border;
+    background-color: $pf-c-vertical-nav__group--BackgroundColor;
+    color: $pf-c-vertical-nav__group--Color;
+  }
+
+  &__secondary-menu {
+    padding: $pf-c-vertical-nav__secondary-menu--Padding;
+    border: $pf-c-vertical-nav__secondary-menu--Border;
+    background-color: $pf-c-vertical-nav__secondary-menu--BackgroundColor;
+    color: $pf-c-vertical-nav__secondary-menu--Color;
+  }
+
+  &__tertiary-menu {
+    padding: $pf-c-vertical-nav__tertiary-menu--Padding;
+    border: $pf-c-vertical-nav__tertiary-menu--Border;
+    background-color: $pf-c-vertical-nav__tertiary-menu--BackgroundColor;
+    color: $pf-c-vertical-nav__tertiary-menu--Color;
+  }
+}
