@@ -1,0 +1,67 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+
+$pf-c-tree--Padding: $unit-s !default;
+$pf-c-tree--Padding: $unit-s !default;
+$pf-c-tree--BorderLeft: 0px solid #000 !default;
+$pf-c-tree--BackgroundColor: #fff !default;
+$pf-c-tree--Color: #000 !default;
+
+$pf-c-tree__node--Padding: $unit-s $unit-l !default;
+$pf-c-tree__node--BorderLeft: 2px solid #000 !default;
+$pf-c-tree__node--BackgroundColor: #fff !default;
+$pf-c-tree__node--Color: #000 !default;
+
+$pf-c-tree__node--is-leaf--Padding: $unit-s $unit-m !default;
+$pf-c-tree__node--is-leaf--BorderLeft: 2px solid #000 !default;
+$pf-c-tree__node--is-leaf--BackgroundColor: #fff !default;
+$pf-c-tree__node--is-leaf--Color: #000 !default;
+
+$pf-c-tree_toggle--MarginLeft: -$unit-m !default;
+$pf-c-tree_toggle--Padding: 0 !default;
+$pf-c-tree_toggle--Border: 0px solid #000 !default;
+$pf-c-tree_toggle--BackgroundColor: #fff !default;
+$pf-c-tree_toggle--Color: #000 !default;
+
+.pf-c-tree {
+  display: block;
+  margin: 0;
+  padding: $pf-c-tree--Padding;
+  border-left: $pf-c-tree--BorderLeft;
+  background-color: $pf-c-tree--BackgroundColor;
+  color: $pf-c-tree--Color;
+
+  &_toggle {
+    position: absolute;
+    display: inline-block;
+    margin-left: $pf-c-tree_toggle--MarginLeft;
+    padding: $pf-c-tree_toggle--Padding;
+    border: $pf-c-tree_toggle--Border;
+    background-color: $pf-c-tree_toggle--BackgroundColor;
+    color: $pf-c-tree_toggle--Color;
+  }
+
+  &__node {
+    position: relative;
+    padding: $pf-c-tree__node--Padding;
+    border-left: $pf-c-tree__node--BorderLeft;
+    background-color: $pf-c-tree__node--BackgroundColor;
+    color: $pf-c-tree__node--Color;
+  }
+
+  &__node.is-leaf {
+    padding: $pf-c-tree__node--is-leaf--Padding;
+    border-left: $pf-c-tree__node--is-leaf--BorderLeft;
+    background-color: $pf-c-tree__node--is-leaf--BackgroundColor;
+    color: $pf-c-tree__node--is-leaf--Color;
+  }
+  &__node.is-parent {
+
+  }
+}
