@@ -4,30 +4,6 @@ import './styles.scss'
 
 export const Docs = docs
 
-export const AccordionItem2 = ({children, title, isExpanded = false, onClick = false}) => {
-  const icon = (isExpanded) ? <i className="fas fa-caret-down"></i> : <i className="fas fa-caret-down"></i>
-  const itemExpandedClass = (isExpanded) ? 'is-expanded' : ''
-  const executeClickHandler = function() {
-    console.log(isExpanded)
-    isExpanded = !isExpanded
-    console.log(isExpanded)
-    if (onClick) {
-      onClick()
-    }
-  }
-  return (
-    <div className={`pf-c-accordion__item ${itemExpandedClass}`} onClick={executeClickHandler}>
-      <div className="pf-c-accordion__item__header">
-        {icon}
-        <h3 className="pf-c-accordion__item_title">{title}</h3>
-      </div>
-      <div className="pf-c-accordion__item__body">
-        {children}
-      </div>
-    </div>
-  )
-}
-
 export class AccordionItem extends React.Component {
   constructor (props) {
     super(props)
@@ -37,7 +13,6 @@ export class AccordionItem extends React.Component {
     this.toggleBody = this.toggleBody.bind(this)
   }
   toggleBody () {
-    console.log('working')
     this.setState(prevState => ({
       isExpanded: !prevState.isExpanded
     }))
