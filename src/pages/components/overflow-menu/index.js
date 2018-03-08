@@ -1,21 +1,21 @@
 import React from 'react'
 import Documentation from '@siteComponents/Documentation'
 import Example from '@siteComponents/Example'
-import DropdownMenu, {Docs} from '@components/DropdownMenu'
+import OverflowMenu, {Docs} from '@components/OverflowMenu'
 
 export default () => {
   return (
     <Documentation docs={Docs}>
-      <Example heading="DropdownMenu Example">
-        <DropdownMenu>
+      <Example heading="OverflowMenu Example">
+        <OverflowMenu>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </DropdownMenu>
+        </OverflowMenu>
       </Example>
 
-      <Example heading="DropdownMenu Aligned on Right">
-        <DropdownMenu className="is-right-aligned">
+      <Example heading="OverflowMenu Aligned on Right">
+        <OverflowMenu className="is-right-aligned">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </DropdownMenu>
+        </OverflowMenu>
       </Example>
     </Documentation>
   )

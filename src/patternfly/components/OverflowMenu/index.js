@@ -4,7 +4,7 @@ import './styles.scss'
 
 export const Docs = docs
 
-class DropdownMenu extends React.Component {
+class OverflowMenu extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
@@ -24,11 +24,11 @@ class DropdownMenu extends React.Component {
     let className = (this.state.className) ? this.state.className : ''
 
     return (
-      <div className={`pf-c-dropdown-menu ${className} ${itemExpandedClass}`}>
-        <button className="pf-c-dropdown-menu_toggle" onClick={this.toggleBody}>
+      <div className={`pf-c-overflow-menu ${className} ${itemExpandedClass}`}>
+        <button className="pf-c-overflow-menu_toggle" onClick={this.toggleBody}>
           <i className="fas fa-ellipsis-v"></i>
         </button>
-        <div className="pf-c-dropdown-menu__body">
+        <div className="pf-c-overflow-menu__body">
           {this.props.children}
         </div>
       </div>
@@ -36,4 +36,4 @@ class DropdownMenu extends React.Component {
   }
 }
 
-export default DropdownMenu
+export default OverflowMenu

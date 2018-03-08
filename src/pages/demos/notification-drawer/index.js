@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.scss'
 import Drawer from '@components/Drawer'
-import DropdownMenu from '@components/DropdownMenu'
+import OverflowMenu from '@components/OverflowMenu'
 import Accordion, {AccordionItem} from '@components/Accordion'
 import Split from '@layouts/Split'
 
@@ -20,9 +20,9 @@ export default ({children, className = ''}) => {
                 <p>3/8/2018 | 6:40:15 AM</p>
               </div>
               <div>
-                <DropdownMenu className="is-right-aligned">
+                <OverflowMenu className="is-right-aligned">
                   <p>actions</p>
-                </DropdownMenu>
+                </OverflowMenu>
               </div>
             </Split>
           </AccordionItem>
