@@ -1,0 +1,60 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$pf-c-drawer--Width: 350px !default;
+$pf-c-drawer--MaxWidth: 100% !default;
+$pf-c-drawer--Padding: $unit-s !default;
+$pf-c-drawer__header--Padding: $unit-s !default;
+$pf-c-drawer__body--Padding: $unit-s !default;
+$pf-c-drawer__footer--Padding: $unit-s !default;
+
+$pf-c-drawer--Border: 1px solid #000 !default;
+$pf-c-drawer--BackgroundColor: #fff !default;
+$pf-c-drawer--Color: #000 !default;
+$pf-c-drawer__header--Border: 1px solid #000 !default;
+$pf-c-drawer__header--BackgroundColor: #fff !default;
+$pf-c-drawer__header--Color: #000 !default;
+$pf-c-drawer__body--Border: 1px solid #000 !default;
+$pf-c-drawer__body--BackgroundColor: #fff !default;
+$pf-c-drawer__body--Color: #000 !default;
+
+.pf-c-drawer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  max-height: 100vh;
+  width: $pf-c-drawer--Width;
+  max-width: $pf-c-drawer--MaxWidth;
+  padding: $pf-c-drawer--Padding;
+  margin: 0;
+  border: $pf-c-drawer--Border;
+  background-color: $pf-c-drawer--BackgroundColor;
+  color: $pf-c-drawer--Color;
+
+  &.is-right {
+    right: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $pf-c-drawer__header--Padding;
+    border: $pf-c-drawer__header--Border;
+    background-color: $pf-c-drawer__header--BackgroundColor;
+    color: $pf-c-drawer__header--Color;
+  }
+  &__body {
+    flex: 1;
+    padding: $pf-c-drawer__body--Padding;
+    border: $pf-c-drawer__body--Border;
+    background-color: $pf-c-drawer__body--BackgroundColor;
+    color: $pf-c-drawer__body--Color;
+  }
+}

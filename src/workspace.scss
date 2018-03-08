@@ -2,6 +2,9 @@
 // styles placed here are only meant for styling
 // the workspace or applying styles that are only
 // relevant inside of the workspace
+*, *:before, *:after {
+  box-sizing: border-box;
+}
 .layout {
   display: flex;
   flex-direction: column;
@@ -145,6 +148,17 @@
   .pf-l-level > * {
     border: 2px dashed #393f44;
     padding: 0.5rem;
+  }
+}
+
+.is-drawer-page {
+  .Example__section__body {
+    position: relative;
+    height: 400px;
+    padding: 0;
+  }
+  .pf-c-drawer {
+
   }
 }
 /* stylelint-enable */
