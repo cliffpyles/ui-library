@@ -1,0 +1,41 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$pf-c-toolbar--Padding: $unit-s !default;
+$pf-c-toolbar--Border: 1px solid #000 !default;
+$pf-c-toolbar--BackgroundColor: #fff !default;
+$pf-c-toolbar--Color: #000 !default;
+
+$pf-c-toolbar__group--Padding: $unit-s !default;
+$pf-c-toolbar__group--BackgroundColor: #fff !default;
+$pf-c-toolbar__group--Color: #000 !default;
+$pf-c-toolbar__group--not-last-of-type--BorderRight: 1px solid #000 !default;
+
+.pf-c-toolbar {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  padding: $pf-c-toolbar--Padding;
+  border: $pf-c-toolbar--Border;
+  background-color: $pf-c-toolbar--BackgroundColor;
+  color: $pf-c-toolbar--Color;
+  &.has-space-between {
+    justify-content: space-between;
+  }
+  &.has-space-between > &__group:not(:last-of-type) {
+    border-right: 0;
+  }
+  &__group {
+    padding: $pf-c-toolbar__group--Padding;
+    background-color: $pf-c-toolbar__group--BackgroundColor;
+    color: $pf-c-toolbar__group--Color;
+  }
+  &__group:not(:last-of-type) {
+    border-right: $pf-c-toolbar__group--not-last-of-type--BorderRight;
+  }
+}
