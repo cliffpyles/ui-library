@@ -161,4 +161,11 @@
 
   }
 }
+.is-grid-page {
+  .pf-l-grid,
+  .pf-l-grid > * {
+    border: 2px dashed #393f44;
+    padding: 0.5rem;
+  }
+}
 /* stylelint-enable */
