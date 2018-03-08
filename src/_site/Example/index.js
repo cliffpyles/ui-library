@@ -23,13 +23,13 @@ export default ({heading, description, children}) => {
           <CodepenButton html={indentedOutput} />
         </div>
       </div>
-      <div className="Example__section">
+      <div className="Example__section is-preview">
         <h4 className="Example__section_heading">Preview</h4>
         <div className="Example__section__body">
           {children}
         </div>
       </div>
-      <div className="Example__section">
+      <div className="Example__section is-code">
         <h4 className="Example__section_heading">Code</h4>
         <div className="Example__section__body has-no-padding">
           <pre className="Example__pre">
