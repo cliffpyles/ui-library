@@ -8,13 +8,8 @@ $unit-xxl: 128px !default;
 
 $pf-c-modal--Padding: $unit-s !default;
 $pf-c-modal--Border: 1px solid #000 !default;
-$pf-c-modal--BackgroundColor: #fff !default;
+$pf-c-modal--BackgroundColor: rgba(0, 0, 0, 0.25) !default;
 $pf-c-modal--Color: #000 !default;
-
-$pf-c-modal__overlay--Padding: $unit-s !default;
-$pf-c-modal__overlay--Border: 1px solid #000 !default;
-$pf-c-modal__overlay--BackgroundColor: rgba(0, 0, 0, 0.25) !default;
-$pf-c-modal__overlay--Color: #000 !default;
 
 $pf-c-modal__dialog--Padding: $unit-s !default;
 $pf-c-modal__dialog--Border: 1px solid #000 !default;
@@ -39,6 +34,9 @@ $pf-c-modal__dialog__footer--Color: #000 !default;
 .pf-c-modal {
   display: block;
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: 0;
   top: 0;
   width: 100vw;
@@ -48,18 +46,6 @@ $pf-c-modal__dialog__footer--Color: #000 !default;
   border: $pf-c-modal--Border;
   background-color: $pf-c-modal--BackgroundColor;
   color: $pf-c-modal--Color;
-
-  &__overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 100%;
-    padding: $pf-c-modal__overlay--Padding;
-    border: $pf-c-modal__overlay--Border;
-    background-color: $pf-c-modal__overlay--BackgroundColor;
-    color: $pf-c-modal__overlay--Color;
-  }
 
   &__dialog {
     display: flex;

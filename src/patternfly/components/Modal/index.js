@@ -31,10 +31,8 @@ export const ModalDialogFooter = ({children, className = ''}) => {
 export default ({children, className = ''}) => {
   return (
     <div className={`pf-c-modal ${className}`}>
-      <div className="pf-c-modal__overlay">
-        <div className="pf-c-modal__dialog">
-          {children}
-        </div>
+      <div className="pf-c-modal__dialog">
+        {children}
       </div>
     </div>
   )
