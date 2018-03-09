@@ -199,6 +199,23 @@
     height: 400px;
     padding: 0;
   }
-  .pf-c-drawer {}
+}
+
+.is-bullseye-documentation {
+  .Example__section.is-preview .Example__section__body {
+    position: relative;
+    height: 400px;
+    padding: 0;
+  }
+  .pf-l-bullseye.is-full-page {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  .pf-l-bullseye,
+  .pf-l-bullseye > * {
+    border: 2px dashed #393f44;
+    padding: 0.5rem;
+  }
 }
 /* stylelint-enable */
