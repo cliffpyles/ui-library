@@ -192,4 +192,13 @@
     min-height: 400px;
   }
 }
+
+.is-notification-drawer-documentation {
+  .Example__section.is-preview .Example__section__body {
+    position: relative;
+    height: 400px;
+    padding: 0;
+  }
+  .pf-c-drawer {}
+}
 /* stylelint-enable */
