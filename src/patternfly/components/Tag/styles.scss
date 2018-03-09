@@ -6,18 +6,34 @@ $unit-l: 32px !default;
 $unit-xl: 64px !default;
 $unit-xxl: 128px !default;
 
+$pf-c-tag--FontSize: 0.85em !default;
 $pf-c-tag--Padding: $unit-xxs $unit-xs !default;
 $pf-c-tag--Border: 1px solid #000 !default;
 $pf-c-tag--BackgroundColor: #fff !default;
 $pf-c-tag--Color: #000 !default;
-$pf-c-tag--FontSize: 0.85em !default;
+
+$pf-c-tag_delete--FontSize: 0.85em !default;
+$pf-c-tag_delete--Padding: 0 !default;
+$pf-c-tag_delete--MarginLeft: 0.5em !default;
+$pf-c-tag_delete--Border: 0px solid #000 !default;
+$pf-c-tag_delete--BackgroundColor: #fff !default;
+$pf-c-tag_delete--Color: #000 !default;
 
 .pf-c-tag {
-  font-size: $pf-c-tag--FontSize;
   display: inline-block;
-  padding: $pf-c-tag--Padding;
   margin: 0;
+  font-size: $pf-c-tag--FontSize;
+  padding: $pf-c-tag--Padding;
   border: $pf-c-tag--Border;
   background-color: $pf-c-tag--BackgroundColor;
   color: $pf-c-tag--Color;
+
+  &_delete {
+    font-size: $pf-c-tag_delete--FontSize;
+    padding: $pf-c-tag_delete--Padding;
+    margin-left: $pf-c-tag_delete--MarginLeft;
+    border: $pf-c-tag_delete--Border;
+    background-color: $pf-c-tag_delete--BackgroundColor;
+    color: $pf-c-tag_delete--Color;
+  }
 }

@@ -9,6 +9,10 @@ export default () => {
       <Example heading="Tag">
         <Tag>example</Tag>
       </Example>
+
+      <Example heading="Tag with Delete">
+        <Tag hasDelete={true}>example</Tag>
+      </Example>
     </Documentation>
   )
 }

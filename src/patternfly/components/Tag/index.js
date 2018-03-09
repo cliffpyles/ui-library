@@ -4,10 +4,18 @@ import './styles.scss'
 
 export const Docs = docs
 
-export default ({children, className = ''}) => {
+const TagDelete = () => {
   return (
-    <span className={`pf-c-tag ${className}`}>
+    <button className="pf-c-tag_delete">
+      <i className="fas fa-times"></i>
+    </button>
+  )
+}
+export default ({children, className = '', hasDelete = false}) => {
+  return (
+    <p className={`pf-c-tag ${className}`}>
       {children}
-    </span>
+      {hasDelete && <TagDelete />}
+    </p>
   )
 }
