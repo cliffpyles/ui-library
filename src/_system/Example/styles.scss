@@ -36,8 +36,11 @@
   &__section__body.has-no-padding {
     padding: 0;
   }
+  &__section__body.is-viewport {
+    transform: scale(1);
+    height: 300px;
+  }
   &__section.is-code &__section__body {}
-  &__section.is-preview &__section__body {}
   &__pre[class*="language-"],
   &__pre[class*="language-"] > code {
     font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
