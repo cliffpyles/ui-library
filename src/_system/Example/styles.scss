@@ -29,7 +29,6 @@
   &__section__body {
     width: 100%;
     padding: 1rem;
-    // overflow: hidden;
     background-color: #fff;
     border: 1px solid #eaeaea;
   }
@@ -37,8 +36,10 @@
     padding: 0;
   }
   &__section__body.is-viewport {
-    transform: scale(1);
+    padding: 0;
     height: 300px;
+    overflow: auto;
+    transform: scale(1);
   }
   &__section.is-code &__section__body {}
   &__pre[class*="language-"],

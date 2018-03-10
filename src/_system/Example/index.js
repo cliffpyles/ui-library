@@ -24,7 +24,7 @@ export default ({heading, description, children, isViewport = false}) => {
         </div>
       </div>
       <div className="Example__section is-preview">
-        <h4 className="Example__section_heading">Preview</h4>
+        <h4 className="Example__section_heading">Preview{isViewport ? ' (Represents Viewport)' : ''}</h4>
         <div className={`Example__section__body ${isViewport ? 'is-viewport' : ''}`}>
           {children}
         </div>
