@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Panel, {Docs} from '@components/Panel'
+import Panel from '@components/Panel'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Panel on Left" isViewport={true}>
         <Panel className="is-left">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

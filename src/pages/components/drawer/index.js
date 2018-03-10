@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Drawer, {Docs} from '@components/Drawer'
+import Drawer from '@components/Drawer'
 
 export default () => {
   return (
-    <Documentation docs={Docs} className="is-drawer-page">
+    <Documentation className="is-drawer-page">
       <Example heading="Drawer">
         <Drawer title="Title of Drawer">
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Breadcrumb, {BreadcrumbItem, Docs} from '@components/Breadcrumb'
+import Breadcrumb, {BreadcrumbItem} from '@components/Breadcrumb'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Breadcrumb">
         <Breadcrumb>
           <BreadcrumbItem path="/">home</BreadcrumbItem>

@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import OverflowMenu, {Docs} from '@components/OverflowMenu'
+import OverflowMenu from '@components/OverflowMenu'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="OverflowMenu Example">
         <OverflowMenu>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

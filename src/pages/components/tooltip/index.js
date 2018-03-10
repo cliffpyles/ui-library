@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Tooltip, {Docs} from '@components/Tooltip'
+import Tooltip from '@components/Tooltip'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Tooltip Above">
         <Tooltip className="is-above" message="Message to show above the text">Example</Tooltip>
       </Example>

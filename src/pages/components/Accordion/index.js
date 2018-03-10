@@ -1,7 +1,7 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Accordion, {AccordionItem, Docs} from '@components/Accordion'
+import Accordion, {AccordionItem} from '@components/Accordion'
 
 export default () => {
   const accordionExpandStates = {
@@ -12,7 +12,7 @@ export default () => {
   }
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Accordion Example">
         <Accordion>
           <AccordionItem title="item 1" isExpanded={accordionExpandStates.item1}>

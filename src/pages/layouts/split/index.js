@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Split, {Docs} from '@layouts/Split'
+import Split from '@layouts/Split'
 
 export default () => {
   return (
-    <Documentation docs={Docs} className="is-split-page">
+    <Documentation className="is-split-page">
       <Example heading="Split Example - Default">
         <Split>
           <div>

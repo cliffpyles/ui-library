@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Toolbar, {ToolbarGroup, Docs} from '@components/Toolbar'
+import Toolbar, {ToolbarGroup} from '@components/Toolbar'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Toolbar">
         <Toolbar>
           <button>Button 1</button>

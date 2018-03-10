@@ -5,7 +5,7 @@ import Table, { Docs } from '@components/Table'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Table">
         <Table
           columns={[

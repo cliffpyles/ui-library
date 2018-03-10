@@ -7,7 +7,7 @@ export default () => {
   const Docs = ''
 
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Card">
         <Card>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quae odio sed veniam. Fugit perspiciatis quaerat laborum corrupti quo repudiandae, fugiat placeat sapiente blanditiis totam incidunt eum, quis excepturi voluptas?</p>

@@ -2,7 +2,7 @@ import React from 'react'
 import docs from './docs.md'
 import './styles.scss'
 
-export const Docs = docs
+
 const HorizontalBar = ({value = 0, max = 100}) => {
   const progress = (value / max) * 100
   return (

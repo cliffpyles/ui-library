@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Tree, {TreeNode, Docs} from '@components/Tree'
+import Tree, {TreeNode} from '@components/Tree'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Tree Example">
         <Tree>
           <TreeNode name="Desktop">

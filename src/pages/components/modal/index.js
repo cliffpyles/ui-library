@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Modal, {ModalDialogHeader, ModalDialogBody, ModalDialogFooter, Docs} from '@components/Modal'
+import Modal, {ModalDialogHeader, ModalDialogBody, ModalDialogFooter} from '@components/Modal'
 
 export default () => {
   return (
-    <Documentation docs={Docs} className="is-modal-page">
+    <Documentation className="is-modal-page">
       <Example heading="Modal">
         <Modal>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

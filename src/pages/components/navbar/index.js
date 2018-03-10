@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Navbar, {NavbarItem, Docs} from '@components/Navbar'
+import Navbar, {NavbarItem} from '@components/Navbar'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Navbar">
         <Navbar>
           <NavbarItem>Home</NavbarItem>

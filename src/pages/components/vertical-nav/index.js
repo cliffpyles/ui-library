@@ -9,7 +9,7 @@ import VerticalNav, {
 
 export default () => {
   return (
-    <Documentation docs={Docs} className="is-vertical-nav-page">
+    <Documentation className="is-vertical-nav-page">
       <Example heading="Vertical Nav">
         <VerticalNav>
           <VerticalNavItem path="/">home</VerticalNavItem>

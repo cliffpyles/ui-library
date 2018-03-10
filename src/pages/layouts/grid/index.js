@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Grid, {Docs} from '@layouts/Grid'
+import Grid from '@layouts/Grid'
 
 export default () => {
   return (
-    <Documentation docs={Docs} className="is-grid-page">
+    <Documentation className="is-grid-page">
       <Example heading="Grid Example">
         <Grid>
           <div>

@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Section, {Docs} from '@components/Section'
+import Section from '@components/Section'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Section">
         <Section>
           <h2>Example Section</h2>

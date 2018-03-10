@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Bullseye, {Docs} from '@layouts/Bullseye'
+import Bullseye from '@layouts/Bullseye'
 
 export default () => {
   return (
-    <Documentation docs={Docs} className="is-bullseye-documentation">
+    <Documentation className="is-bullseye-documentation">
       <Example heading="Bullseye">
         <Bullseye>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

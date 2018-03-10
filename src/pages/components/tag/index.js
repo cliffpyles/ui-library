@@ -1,11 +1,11 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Tag, {Docs} from '@components/Tag'
+import Tag from '@components/Tag'
 
 export default () => {
   return (
-    <Documentation docs={Docs}>
+    <Documentation>
       <Example heading="Tag">
         <Tag>example</Tag>
       </Example>
