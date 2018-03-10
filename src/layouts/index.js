@@ -60,6 +60,10 @@ export default ({ children, data }) => {
             <h3 className="layout__sidebar_heading">Patterns</h3>
             <Navigation links={allPages.pattern} />
           </div>
+          <div className="layout__sidebar__item">
+            <h3 className="layout__sidebar_heading">Views</h3>
+            <Navigation links={allPages.view} />
+          </div>
         </div>
         <div className="layout__content">
           {children()}
