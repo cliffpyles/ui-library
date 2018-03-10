@@ -69,7 +69,6 @@ export default ({ children, data }) => {
           {children()}
         </div>
       </main>
-      <footer className="layout__footer"></footer>
     </div>
   )
 }
