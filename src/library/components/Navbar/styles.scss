@@ -1,0 +1,62 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$navbar--Padding: $unit-s !default;
+$navbar--Border: 1px solid #000 !default;
+$navbar--BackgroundColor: #fff !default;
+$navbar--Color: #000 !default;
+
+$navbar__items--Padding: $unit-s !default;
+$navbar__items--Border: 1px solid #000 !default;
+$navbar__items--BackgroundColor: #fff !default;
+$navbar__items--Color: #000 !default;
+
+$navbar__item--Padding: $unit-s !default;
+$navbar__item--Border: 1px solid #000 !default;
+$navbar__item--BackgroundColor: #fff !default;
+$navbar__item--Color: #000 !default;
+
+$navbar_link--Padding: $unit-s !default;
+$navbar_link--Border: 1px solid #000 !default;
+$navbar_link--BackgroundColor: #fff !default;
+$navbar_link--Color: #000 !default;
+
+.navbar {
+  display: block;
+  margin: 0;
+  padding: $navbar--Padding;
+  border: $navbar--Border;
+  background-color: $navbar--BackgroundColor;
+  color: $navbar--Color;
+
+  &.is-vertical > &__items {
+    flex-direction: column;
+  }
+
+  &__items {
+    display: flex;
+    list-style-type: none;
+    padding: $navbar__items--Padding;
+    border: $navbar__items--Border;
+    background-color: $navbar__items--BackgroundColor;
+    color: $navbar__items--Color;
+  }
+  &__item {
+    padding: $navbar__item--Padding;
+    border: $navbar__item--Border;
+    background-color: $navbar__item--BackgroundColor;
+    color: $navbar__item--Color;
+  }
+  &_link {
+    display: block;
+    padding: $navbar_link--Padding;
+    border: $navbar_link--Border;
+    background-color: $navbar_link--BackgroundColor;
+    color: $navbar_link--Color;
+  }
+}

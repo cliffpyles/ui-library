@@ -1,0 +1,83 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$modal--Padding: $unit-s !default;
+$modal--Border: 1px solid #000 !default;
+$modal--BackgroundColor: rgba(0, 0, 0, 0.25) !default;
+$modal--Color: #000 !default;
+
+$modal__dialog--Padding: $unit-s !default;
+$modal__dialog--Border: 1px solid #000 !default;
+$modal__dialog--BackgroundColor: #fff !default;
+$modal__dialog--Color: #000 !default;
+
+$modal__dialog__header--Padding: $unit-s !default;
+$modal__dialog__header--Border: 1px solid #000 !default;
+$modal__dialog__header--BackgroundColor: #fff !default;
+$modal__dialog__header--Color: #000 !default;
+
+$modal__dialog__body--Padding: $unit-s !default;
+$modal__dialog__body--Border: 1px solid #000 !default;
+$modal__dialog__body--BackgroundColor: #fff !default;
+$modal__dialog__body--Color: #000 !default;
+
+$modal__dialog__footer--Padding: $unit-s !default;
+$modal__dialog__footer--Border: 1px solid #000 !default;
+$modal__dialog__footer--BackgroundColor: #fff !default;
+$modal__dialog__footer--Color: #000 !default;
+
+.modal {
+  display: block;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: $modal--Padding;
+  border: $modal--Border;
+  background-color: $modal--BackgroundColor;
+  color: $modal--Color;
+
+  &__dialog {
+    display: flex;
+    flex-direction: column;
+    max-height: 100vh;
+    max-width: 100vw;
+    padding: $modal__dialog--Padding;
+    border: $modal__dialog--Border;
+    background-color: $modal__dialog--BackgroundColor;
+    color: $modal__dialog--Color;
+  }
+
+  &__dialog__header {
+    padding: $modal__dialog__header--Padding;
+    border: $modal__dialog__header--Border;
+    background-color: $modal__dialog__header--BackgroundColor;
+    color: $modal__dialog__header--Color;
+  }
+
+  &__dialog__body {
+    flex: 1;
+    padding: $modal__dialog__body--Padding;
+    border: $modal__dialog__body--Border;
+    background-color: $modal__dialog__body--BackgroundColor;
+    color: $modal__dialog__body--Color;
+  }
+
+  &__dialog__footer {
+    padding: $modal__dialog__footer--Padding;
+    border: $modal__dialog__footer--Border;
+    background-color: $modal__dialog__footer--BackgroundColor;
+    color: $modal__dialog__footer--Color;
+  }
+
+}

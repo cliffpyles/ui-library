@@ -6,9 +6,9 @@ const WebpackNotifierPlugin = require('webpack-notifier')
 exports.onCreateNode = ({ node, boundActionCreators }) => {
   const { createNodeField } = boundActionCreators
   const PAGES_BASE_DIR = path.resolve(__dirname, './src/pages')
-  const PATTERNS_BASE_DIR = path.resolve(__dirname, './src/patternfly/patterns')
-  const COMPONENTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/components')
-  const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/patternfly/layouts')
+  const PATTERNS_BASE_DIR = path.resolve(__dirname, './src/library/patterns')
+  const COMPONENTS_BASE_DIR = path.resolve(__dirname, './src/library/components')
+  const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/library/layouts')
   const isMarkdown = (node.internal.type === 'MarkdownRemark')
 
   if (isMarkdown) {
@@ -142,16 +142,16 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   config.merge({
     resolve: {
       alias: {
-        '@siteComponents': path.resolve(__dirname, './src/_site'),
-        '@patterns': path.resolve(__dirname, './src/patternfly/patterns'),
-        '@components': path.resolve(__dirname, './src/patternfly/components'),
-        '@layouts': path.resolve(__dirname, './src/patternfly/layouts'),
+        '@systemComponents': path.resolve(__dirname, './src/_system'),
+        '@patterns': path.resolve(__dirname, './src/library/patterns'),
+        '@components': path.resolve(__dirname, './src/library/components'),
+        '@layouts': path.resolve(__dirname, './src/library/layouts'),
         '@project': path.resolve(__dirname, './src')
       }
     },
     plugins: [
       new WebpackNotifierPlugin({
-        title: 'PF-Next',
+        title: 'Relax',
         skipFirstNotification: true
       })
     ]

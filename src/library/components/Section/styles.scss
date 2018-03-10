@@ -1,0 +1,21 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$section--Padding: $unit-l !default;
+$section--Border: 1px solid #000 !default;
+$section--BackgroundColor: #fff !default;
+$section--Color: #000 !default;
+
+.section {
+  display: block;
+  margin: 0;
+  padding: $section--Padding;
+  border: $section--Border;
+  background-color: $section--BackgroundColor;
+  color: $section--Color;
+}

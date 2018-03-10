@@ -1,0 +1,14 @@
+.split {
+  display: flex;
+  padding: 0;
+  margin: 0;
+
+  > :nth-child(2),
+  > .split__main {
+    flex: 1;
+  }
+  > .split__secondary,
+  > .split__secondary:nth-child(2) {
+    flex: 0 1 auto;
+  }
+}

@@ -1,0 +1,35 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+
+$progress-bar--Padding: $unit-s !default;
+$progress-bar--Border: 1px solid #000 !default;
+$progress-bar--BackgroundColor: #fff !default;
+$progress-bar--Color: #000 !default;
+
+$progress-bar__horizontal-bar_progress--Color: #000 !default;
+
+.progress-bar {
+  display: block;
+  margin: 0;
+  padding: $progress-bar--Padding;
+  border: $progress-bar--Border;
+  background-color: $progress-bar--BackgroundColor;
+  color: $progress-bar--Color;
+
+  &_element {
+    position: absolute;
+    height: 0;
+    visibility: hidden;
+  }
+  &__indicator {
+  }
+  &__horizontal-bar_progress{
+    color: $progress-bar__horizontal-bar_progress--Color;
+  }
+}

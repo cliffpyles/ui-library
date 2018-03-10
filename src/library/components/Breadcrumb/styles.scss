@@ -1,0 +1,78 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$breadcrumb--Padding: $unit-s !default;
+$breadcrumb--Border: 1px solid #000 !default;
+$breadcrumb--BackgroundColor: #fff !default;
+$breadcrumb--Color: #000 !default;
+
+$breadcrumb__items--Padding: $unit-s !default;
+$breadcrumb__items--Border: 1px solid #000 !default;
+$breadcrumb__items--BackgroundColor: #fff !default;
+$breadcrumb__items--Color: #000 !default;
+
+$breadcrumb__item--Padding: $unit-s !default;
+$breadcrumb__item--Border: 0px solid #000 !default;
+$breadcrumb__item--BackgroundColor: #fff !default;
+$breadcrumb__item--Color: #000 !default;
+
+$breadcrumb_link--Padding: $unit-s !default;
+$breadcrumb_link--Border: 0px solid #000 !default;
+$breadcrumb_link--BackgroundColor: #fff !default;
+$breadcrumb_link--Color: #000 !default;
+
+$breadcrumb_caption--Padding: $unit-s !default;
+$breadcrumb_caption--Border: 0px solid #000 !default;
+$breadcrumb_caption--BackgroundColor: #fff !default;
+$breadcrumb_caption--Color: #000 !default;
+
+.breadcrumb {
+  display: block;
+  margin: 0;
+  padding: $breadcrumb--Padding;
+  border: $breadcrumb--Border;
+  background-color: $breadcrumb--BackgroundColor;
+  color: $breadcrumb--Color;
+  &__items {
+    display: flex;
+    list-style-type: none;
+    padding: $breadcrumb__items--Padding;
+    border: $breadcrumb__items--Border;
+    background-color: $breadcrumb__items--BackgroundColor;
+    color: $breadcrumb__items--Color;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: $breadcrumb__item--Padding;
+    border: $breadcrumb__item--Border;
+    background-color: $breadcrumb__item--BackgroundColor;
+    color: $breadcrumb__item--Color;
+  }
+  &__item:not(:last-of-type):after {
+    content: '/';
+    position: absolute;
+    right: -0.25em;
+    z-index: 1;
+  }
+  &_link {
+    display: block;
+    padding: $breadcrumb_link--Padding;
+    border: $breadcrumb_link--Border;
+    background-color: $breadcrumb_link--BackgroundColor;
+    color: $breadcrumb_link--Color;
+  }
+  &_caption {
+    display: block;
+    padding: $breadcrumb_caption--Padding;
+    border: $breadcrumb_caption--Border;
+    background-color: $breadcrumb_caption--BackgroundColor;
+    color: $breadcrumb_caption--Color;
+  }
+}

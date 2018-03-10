@@ -26,15 +26,15 @@ const plugins = [
   {
     resolve: 'gatsby-source-filesystem',
     options: {
-      path: `${PROJECT_ROOT}/src/patternfly`,
-      name: 'patternfly',
+      path: `${PROJECT_ROOT}/src/library`,
+      name: 'library',
     },
   },
   {
     resolve: 'gatsby-source-filesystem',
     options: {
-      path: `${PROJECT_ROOT}/src/_site`,
-      name: 'site-components',
+      path: `${PROJECT_ROOT}/src/_system`,
+      name: 'system-components',
     },
   },
   {
@@ -61,14 +61,16 @@ const plugins = [
   {
     resolve: 'gatsby-remark-embed-snippet',
     options: {
-      directory: `${__dirname}/src/patternfly`,
+      directory: `${__dirname}/src/library`,
     },
   }
 ]
 
 module.exports = {
   siteMetadata: {
-    title: 'PF Next',
+    title: 'Relax',
+    name: 'Relax',
+    url: 'http://localhost:8000',
   },
   plugins
 }

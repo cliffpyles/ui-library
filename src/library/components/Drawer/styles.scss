@@ -1,0 +1,60 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$drawer--Width: 350px !default;
+$drawer--MaxWidth: 100% !default;
+$drawer--Padding: $unit-s !default;
+$drawer__header--Padding: $unit-s !default;
+$drawer__body--Padding: $unit-s !default;
+$drawer__footer--Padding: $unit-s !default;
+
+$drawer--Border: 1px solid #000 !default;
+$drawer--BackgroundColor: #fff !default;
+$drawer--Color: #000 !default;
+$drawer__header--Border: 1px solid #000 !default;
+$drawer__header--BackgroundColor: #fff !default;
+$drawer__header--Color: #000 !default;
+$drawer__body--Border: 1px solid #000 !default;
+$drawer__body--BackgroundColor: #fff !default;
+$drawer__body--Color: #000 !default;
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100%;
+  max-height: 100vh;
+  width: $drawer--Width;
+  max-width: $drawer--MaxWidth;
+  padding: $drawer--Padding;
+  margin: 0;
+  border: $drawer--Border;
+  background-color: $drawer--BackgroundColor;
+  color: $drawer--Color;
+
+  &.is-right {
+    right: 0;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $drawer__header--Padding;
+    border: $drawer__header--Border;
+    background-color: $drawer__header--BackgroundColor;
+    color: $drawer__header--Color;
+  }
+  &__body {
+    flex: 1;
+    padding: $drawer__body--Padding;
+    border: $drawer__body--Border;
+    background-color: $drawer__body--BackgroundColor;
+    color: $drawer__body--Color;
+  }
+}

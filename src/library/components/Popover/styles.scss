@@ -1,0 +1,65 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+
+$popover--Padding: $unit-s !default;
+$popover--Border: 1px solid #000 !default;
+$popover--BackgroundColor: #fff !default;
+$popover--Color: #000 !default;
+
+$popover_toggle--Padding: $unit-s !default;
+$popover_toggle--Border: 1px solid #000 !default;
+$popover_toggle--BackgroundColor: #fff !default;
+$popover_toggle--Color: #000 !default;
+
+$popover_message--Padding: $unit-s !default;
+$popover_message--Border: 1px solid #000 !default;
+$popover_message--BackgroundColor: #fff !default;
+$popover_message--Color: #000 !default;
+
+.popover {
+  position: relative;
+  display: inline-flex;
+  margin: 0;
+  padding: $popover--Padding;
+  border: $popover--Border;
+  background-color: $popover--BackgroundColor;
+  color: $popover--Color;
+
+  &_toggle {
+    padding: $popover_toggle--Padding;
+    border: $popover_toggle--Border;
+    background-color: $popover_toggle--BackgroundColor;
+    color: $popover_toggle--Color;
+  }
+  &_message {
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+    padding: $popover_message--Padding;
+    border: $popover_message--Border;
+    background-color: $popover_message--BackgroundColor;
+    color: $popover_message--Color;
+  }
+  &.is-toggled &_message {
+    display: block;
+  }
+  &.is-above {
+    flex-direction: column;
+    align-items: center;
+  }
+  &.is-above &_message { bottom: 100%; }
+  &.is-below {
+    flex-direction: column;
+    align-items: center;
+  }
+  &.is-below &_message { top: 100%; }
+  &.is-left &_message { right: 100%; }
+  &.is-right &_message { left: 100%; }
+}

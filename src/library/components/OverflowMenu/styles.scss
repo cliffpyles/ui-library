@@ -1,0 +1,50 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$overflow-menu--Padding: 0 !default;
+$overflow-menu__body--Padding: $unit-s !default;
+
+$overflow-menu--Border: 0px solid #000 !default;
+$overflow-menu--BackgroundColor: #fff !default;
+$overflow-menu--Color: #000 !default;
+
+$overflow-menu_toggle--Padding: $unit-s !default;
+$overflow-menu_toggle--Border: 0px solid #000 !default;
+
+$overflow-menu__body--Border: 1px solid #000 !default;
+$overflow-menu__body--BackgroundColor: #fff !default;
+$overflow-menu__body--Color: #000 !default;
+
+.overflow-menu {
+  display: inline-block;
+  position: relative;
+  padding: $overflow-menu--Padding;
+  margin: 0;
+  border: $overflow-menu--Border;
+  background-color: $overflow-menu--BackgroundColor;
+  color: $overflow-menu--Color;
+  &_toggle {
+    padding: $overflow-menu_toggle--Padding;
+    border: $overflow-menu_toggle--Border;
+  }
+  &__body {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    padding: $overflow-menu__body--Padding;
+    border: $overflow-menu__body--Border;
+    background-color: $overflow-menu__body--BackgroundColor;
+    color: $overflow-menu__body--Color;
+  }
+  &.is-expanded > &__body {
+    display: block;
+  }
+  &.is-right-aligned > &__body {
+    right: 0;
+  }
+}

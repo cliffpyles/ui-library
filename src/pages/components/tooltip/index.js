@@ -1,6 +1,6 @@
 import React from 'react'
-import Documentation from '@siteComponents/Documentation'
-import Example from '@siteComponents/Example'
+import Documentation from '@systemComponents/Documentation'
+import Example from '@systemComponents/Example'
 import Tooltip, {Docs} from '@components/Tooltip'
 
 export default () => {

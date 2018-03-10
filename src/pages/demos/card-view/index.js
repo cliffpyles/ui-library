@@ -5,7 +5,7 @@ import Grid from '@layouts/Grid'
 
 export default () => {
   return (
-    <div className="pf-d-card-view">
+    <div className="demo-card-view">
 
       <Grid>
         <Card>

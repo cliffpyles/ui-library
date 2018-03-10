@@ -1,6 +1,6 @@
 import React from 'react'
-import Documentation from '@siteComponents/Documentation'
-import Example from '@siteComponents/Example'
+import Documentation from '@systemComponents/Documentation'
+import Example from '@systemComponents/Example'
 import Split, {Docs} from '@layouts/Split'
 
 export default () => {
@@ -22,13 +22,13 @@ export default () => {
 
       <Example heading="Split Example - Explicit Content Areas">
         <Split>
-          <div className="pf-l-split__main">
+          <div className="split__main">
             <p> Main Content Area. Expands to full-width of the container, minus the width of the secondary content area(s).</p>
           </div>
-          <div className="pf-l-split__secondary">
+          <div className="split__secondary">
             Secondary content area.
           </div>
-          <div className="pf-l-split__secondary">
+          <div className="split__secondary">
             Secondary content area.
           </div>
         </Split>

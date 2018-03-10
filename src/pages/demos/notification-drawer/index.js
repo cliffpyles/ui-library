@@ -7,7 +7,7 @@ import Split from '@layouts/Split'
 
 export default ({children, className = ''}) => {
   return (
-    <div className={`pf-d-notification-drawer ${className}`}>
+    <div className={`demo-notification-drawer ${className}`}>
       <Drawer className="is-right" title="Notification Drawer">
         <Accordion>
           <AccordionItem title="Notification 1">

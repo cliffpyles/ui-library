@@ -1,0 +1,57 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+
+$panel--Padding: $unit-s !default;
+$panel--Border: 1px solid #000 !default;
+$panel--BackgroundColor: #fff !default;
+$panel--Color: #000 !default;
+
+$panel__header--Padding: $unit-s !default;
+$panel__header--Border: 1px solid #000 !default;
+$panel__header--BackgroundColor: #fff !default;
+$panel__header--Color: #000 !default;
+
+$panel__body--Padding: $unit-s !default;
+$panel__body--Border: 1px solid #000 !default;
+$panel__body--BackgroundColor: #fff !default;
+$panel__body--Color: #000 !default;
+
+$panel__footer--Padding: $unit-s !default;
+$panel__footer--Border: 1px solid #000 !default;
+$panel__footer--BackgroundColor: #fff !default;
+$panel__footer--Color: #000 !default;
+
+.panel {
+  display: block;
+  margin: 0;
+  padding: $panel--Padding;
+  border: $panel--Border;
+  background-color: $panel--BackgroundColor;
+  color: $panel--Color;
+
+  // module sections
+  &__header {
+    padding: $panel__header--Padding;
+    border: $panel__header--Border;
+    background-color: $panel__header--BackgroundColor;
+    color: $panel__header--Color;
+  }
+  &__body {
+    padding: $panel__body--Padding;
+    border: $panel__body--Border;
+    background-color: $panel__body--BackgroundColor;
+    color: $panel__body--Color;
+  }
+  &__footer {
+    padding: $panel__footer--Padding;
+    border: $panel__footer--Border;
+    background-color: $panel__footer--BackgroundColor;
+    color: $panel__footer--Color;
+  }
+}

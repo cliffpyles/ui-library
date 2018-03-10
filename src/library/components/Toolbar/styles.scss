@@ -1,0 +1,41 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$toolbar--Padding: $unit-s !default;
+$toolbar--Border: 1px solid #000 !default;
+$toolbar--BackgroundColor: #fff !default;
+$toolbar--Color: #000 !default;
+
+$toolbar__group--Padding: $unit-s !default;
+$toolbar__group--BackgroundColor: #fff !default;
+$toolbar__group--Color: #000 !default;
+$toolbar__group--not-last-of-type--BorderRight: 1px solid #000 !default;
+
+.toolbar {
+  display: flex;
+  align-items: baseline;
+  margin: 0;
+  padding: $toolbar--Padding;
+  border: $toolbar--Border;
+  background-color: $toolbar--BackgroundColor;
+  color: $toolbar--Color;
+  &.has-space-between {
+    justify-content: space-between;
+  }
+  &.has-space-between > &__group:not(:last-of-type) {
+    border-right: 0;
+  }
+  &__group {
+    padding: $toolbar__group--Padding;
+    background-color: $toolbar__group--BackgroundColor;
+    color: $toolbar__group--Color;
+  }
+  &__group:not(:last-of-type) {
+    border-right: $toolbar__group--not-last-of-type--BorderRight;
+  }
+}

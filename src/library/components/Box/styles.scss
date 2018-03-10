@@ -1,0 +1,21 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$box--Padding: $unit-s !default;
+$box--Border: 1px solid #000 !default;
+$box--BackgroundColor: #fff !default;
+$box--Color: #000 !default;
+
+.box {
+  display: block;
+  padding: $box--Padding;
+  margin: 0;
+  border: $box--Border;
+  background-color: $box--BackgroundColor;
+  color: $box--Color;
+}

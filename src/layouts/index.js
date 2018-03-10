@@ -2,10 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Navigation from '@siteComponents/Navigation'
+import Navigation from '@systemComponents/Navigation'
 
 import 'prismjs/themes/prism-coy.css'
-import '../patternfly/patternfly.scss'
+import '../base.scss'
 import '../workspace.scss'
 
 export default ({ children, data }) => {
@@ -32,16 +32,17 @@ export default ({ children, data }) => {
     })
     return accum
   }, {})
+  let site = data.site.siteMetadata
 
   return (
     <div className="layout">
       <Helmet>
-        <title>PF Next</title>
+        <title>{site.title}</title>
         <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
       </Helmet>
       <header className="layout__header">
         <h1>
-          <Link to="/">PF Next</Link>
+          <Link to="/">{site.name}</Link>
         </h1>
         <Navigation links={allPages.page} isHorizontal={true}/>
       </header>
@@ -75,6 +76,12 @@ export default ({ children, data }) => {
 
 export const indexPageQuery = graphql`
   query IndexPageQuery {
+    site {
+      siteMetadata {
+        name
+        title
+      }
+    }
     allSitePage(
       filter: { path: { regex: "/^((?!(404)).)*$/" } }
     ) {

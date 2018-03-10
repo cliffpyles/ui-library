@@ -1,0 +1,83 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$vertical-nav--Padding: $unit-s !default;
+$vertical-nav--Border: 1px solid #000 !default;
+$vertical-nav--BackgroundColor: #fff !default;
+$vertical-nav--Color: #000 !default;
+
+$vertical-nav__items--Padding: 0 !default;
+$vertical-nav__items--Border: 1px solid #000 !default;
+$vertical-nav__items--BackgroundColor: #fff !default;
+$vertical-nav__items--Color: #000 !default;
+
+$vertical-nav__item--Padding: $unit-s !default;
+$vertical-nav__item--Border: 1px solid #000 !default;
+$vertical-nav__item--BackgroundColor: #fff !default;
+$vertical-nav__item--Color: #000 !default;
+
+$vertical-nav__menu--Padding: 0 !default;
+$vertical-nav__menu--Border: 0px solid #000 !default;
+$vertical-nav__menu--BackgroundColor: #fff !default;
+$vertical-nav__menu--Color: #000 !default;
+
+.vertical-nav {
+  display: flex;
+  margin: 0;
+  padding: $vertical-nav--Padding;
+  border: $vertical-nav--Border;
+  background-color: $vertical-nav--BackgroundColor;
+  color: $vertical-nav--Color;
+
+  &__items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    list-style-type: none;
+    margin: 0;
+    padding: $vertical-nav__items--Padding;
+    border: $vertical-nav__items--Border;
+    background-color: $vertical-nav__items--BackgroundColor;
+    color: $vertical-nav__items--Color;
+  }
+  &__item {
+    padding: $vertical-nav__item--Padding;
+    border: $vertical-nav__item--Border;
+    background-color: $vertical-nav__item--BackgroundColor;
+    color: $vertical-nav__item--Color;
+  }
+  &__menu {
+    height: 0;
+    overflow: hidden;
+    padding: $vertical-nav__menu--Padding;
+    border: $vertical-nav__menu--Border;
+    background-color: $vertical-nav__menu--BackgroundColor;
+    color: $vertical-nav__menu--Color;
+  }
+  &__item:hover > &__menu {
+    height: auto;
+  }
+  &.is-slideout &__item {
+    display: flex;
+  }
+  &.is-slideout &__menu {
+    position: absolute;
+    left: 100%;
+    width: 0;
+    top: 0;
+    height: 100%;
+  }
+  &.is-slideout &__item:hover &__menu {
+    width: auto;
+  }
+  &.is-slideout &__menu:hover {
+    width: auto;
+  }
+}
