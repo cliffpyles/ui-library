@@ -11,6 +11,13 @@ export const VerticalNavItem = ({children, className = ''}) => {
     </li>
   )
 }
+export const VerticalNavMenu = ({children, className = ''}) => {
+  return (
+    <ul className={`pf-c-vertical-nav__menu ${className}`}>
+      {children}
+    </ul>
+  )
+}
 
 export default ({children, className = ''}) => {
   return (

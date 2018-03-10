@@ -11,7 +11,7 @@ $pf-c-vertical-nav--Border: 1px solid #000 !default;
 $pf-c-vertical-nav--BackgroundColor: #fff !default;
 $pf-c-vertical-nav--Color: #000 !default;
 
-$pf-c-vertical-nav__items--Padding: $unit-s !default;
+$pf-c-vertical-nav__items--Padding: 0 !default;
 $pf-c-vertical-nav__items--Border: 1px solid #000 !default;
 $pf-c-vertical-nav__items--BackgroundColor: #fff !default;
 $pf-c-vertical-nav__items--Color: #000 !default;
@@ -21,22 +21,13 @@ $pf-c-vertical-nav__item--Border: 1px solid #000 !default;
 $pf-c-vertical-nav__item--BackgroundColor: #fff !default;
 $pf-c-vertical-nav__item--Color: #000 !default;
 
-$pf-c-vertical-nav__group--Padding: $unit-s !default;
-$pf-c-vertical-nav__group--Border: 1px solid #000 !default;
-$pf-c-vertical-nav__group--BackgroundColor: #fff !default;
-$pf-c-vertical-nav__group--Color: #000 !default;
-
-$pf-c-vertical-nav__secondary-menu--Padding: $unit-s !default;
-$pf-c-vertical-nav__secondary-menu--Border: 1px solid #000 !default;
-$pf-c-vertical-nav__secondary-menu--BackgroundColor: #fff !default;
-$pf-c-vertical-nav__secondary-menu--Color: #000 !default;
-
-$pf-c-vertical-nav__tertiary-menu--Padding: $unit-s !default;
-$pf-c-vertical-nav__tertiary-menu--Border: 1px solid #000 !default;
-$pf-c-vertical-nav__tertiary-menu--BackgroundColor: #fff !default;
-$pf-c-vertical-nav__tertiary-menu--Color: #000 !default;
+$pf-c-vertical-nav__menu--Padding: 0 !default;
+$pf-c-vertical-nav__menu--Border: 0px solid #000 !default;
+$pf-c-vertical-nav__menu--BackgroundColor: #fff !default;
+$pf-c-vertical-nav__menu--Color: #000 !default;
 
 .pf-c-vertical-nav {
+  display: flex;
   margin: 0;
   padding: $pf-c-vertical-nav--Padding;
   border: $pf-c-vertical-nav--Border;
@@ -44,6 +35,11 @@ $pf-c-vertical-nav__tertiary-menu--Color: #000 !default;
   color: $pf-c-vertical-nav--Color;
 
   &__items {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
     list-style-type: none;
     margin: 0;
     padding: $pf-c-vertical-nav__items--Padding;
@@ -57,25 +53,31 @@ $pf-c-vertical-nav__tertiary-menu--Color: #000 !default;
     background-color: $pf-c-vertical-nav__item--BackgroundColor;
     color: $pf-c-vertical-nav__item--Color;
   }
-
-  &__group {
-    padding: $pf-c-vertical-nav__group--Padding;
-    border: $pf-c-vertical-nav__group--Border;
-    background-color: $pf-c-vertical-nav__group--BackgroundColor;
-    color: $pf-c-vertical-nav__group--Color;
+  &__menu {
+    height: 0;
+    overflow: hidden;
+    padding: $pf-c-vertical-nav__menu--Padding;
+    border: $pf-c-vertical-nav__menu--Border;
+    background-color: $pf-c-vertical-nav__menu--BackgroundColor;
+    color: $pf-c-vertical-nav__menu--Color;
   }
-
-  &__secondary-menu {
-    padding: $pf-c-vertical-nav__secondary-menu--Padding;
-    border: $pf-c-vertical-nav__secondary-menu--Border;
-    background-color: $pf-c-vertical-nav__secondary-menu--BackgroundColor;
-    color: $pf-c-vertical-nav__secondary-menu--Color;
+  &__item:hover > &__menu {
+    height: auto;
   }
-
-  &__tertiary-menu {
-    padding: $pf-c-vertical-nav__tertiary-menu--Padding;
-    border: $pf-c-vertical-nav__tertiary-menu--Border;
-    background-color: $pf-c-vertical-nav__tertiary-menu--BackgroundColor;
-    color: $pf-c-vertical-nav__tertiary-menu--Color;
+  &.is-slideout &__item {
+    display: flex;
+  }
+  &.is-slideout &__menu {
+    position: absolute;
+    left: 100%;
+    width: 0;
+    top: 0;
+    height: 100%;
+  }
+  &.is-slideout &__item:hover &__menu {
+    width: auto;
+  }
+  &.is-slideout &__menu:hover {
+    width: auto;
   }
 }
