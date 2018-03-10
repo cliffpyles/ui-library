@@ -4,6 +4,8 @@ import Prism from 'prismjs'
 import PrismCode from 'react-prism'
 import pretty from 'pretty'
 import CodepenButton from '@systemComponents/CodepenButton'
+import Preview from '@systemComponents/Preview'
+import GeneratedSource from '@systemComponents/GeneratedSource'
 
 import './styles.scss'
 import 'prismjs/themes/prism-coy.css'
@@ -23,21 +25,11 @@ export default ({heading, description, children, isViewport = false}) => {
           <CodepenButton html={indentedOutput} />
         </div>
       </div>
-      <div className="Example__section is-preview">
-        <h4 className="Example__section_heading">Preview{isViewport ? ' (Represents Viewport)' : ''}</h4>
-        <div className={`Example__section__body ${isViewport ? 'is-viewport' : ''}`}>
-          {children}
-        </div>
+      <div className="Example__section">
+        <Preview isViewport={isViewport}>{children}</Preview>
       </div>
-      <div className="Example__section is-code">
-        <h4 className="Example__section_heading">Code</h4>
-        <div className="Example__section__body has-no-padding">
-          <pre className="Example__pre">
-            <PrismCode className="language-html">
-              {indentedOutput}
-            </PrismCode>
-          </pre>
-        </div>
+      <div className="Example__section">
+        <GeneratedSource>{children}</GeneratedSource>
       </div>
     </div>
   )

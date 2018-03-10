@@ -1,0 +1,22 @@
+.Preview {
+  &_heading {
+    padding: .5rem;
+    font-weight: 700;
+    text-align: right;
+  }
+  &__body {
+    width: 100%;
+    padding: 1rem;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+  }
+  &__body.has-no-padding {
+    padding: 0;
+  }
+  &__body.is-viewport {
+    padding: 0;
+    height: 300px;
+    overflow: auto;
+    transform: scale(1);
+  }
+}
