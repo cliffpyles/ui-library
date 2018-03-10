@@ -11,22 +11,29 @@ $primary-color: #1966A0;
   flex-direction: column;
   height: 100vh;
   &__header {
+    position: fixed;
+    z-index: 2;
+    width: 100vw;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 2rem;
     background-color: $primary-color;
   }
-  &__header a { color: #fff; }
   &__main {
     display: flex;
     flex: 1;
-    overflow: auto;
+    max-width: 100%;
+    padding-top: 50px;
   }
   &__sidebar {
     padding: 1rem 2rem;
-    // border-right: 1px solid #eaeaea;
   }
+  &__content {
+    padding: 1rem 2rem;
+  }
+  &__header a { color: #fff; }
   &__sidebar a {
     color: $primary-color;
     transition: all 0.2s ease-in-out;
@@ -44,12 +51,6 @@ $primary-color: #1966A0;
   }
   &__sidebar__item + &__sidebar__item {
     margin-top: 1rem;
-  }
-  &__content {
-    padding: 1rem 2rem;
-  }
-  &__footer {
-    padding: 1rem 2rem;
   }
 }
 
@@ -161,14 +162,14 @@ $primary-color: #1966A0;
   }
 }
 
-.is-drawer-page {
-  .Example__section.is-preview .Example__section__body {
-    position: relative;
-    height: 400px;
-    padding: 0;
-  }
-  .drawer {}
-}
+// .is-drawer-page {
+//   .Example__section.is-preview .Example__section__body {
+//     position: relative;
+//     height: 400px;
+//     padding: 0;
+//   }
+//   .drawer {}
+// }
 
 .is-grid-page {
   .grid,
@@ -178,49 +179,49 @@ $primary-color: #1966A0;
   }
 }
 
-.is-modal-page {
-  .Example__section.is-preview .Example__section__body {
-    position: relative;
-    height: 350px;
-    padding: 0;
-  }
-  .modal {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  .modal__dialog {
-    height: 250px;
-  }
-}
+// .is-modal-page {
+//   .Example__section.is-preview .Example__section__body {
+//     position: relative;
+//     height: 350px;
+//     padding: 0;
+//   }
+//   .modal {
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//   }
+//   .modal__dialog {
+//     height: 250px;
+//   }
+// }
 
-.is-vertical-nav-page {
-  .Example__section.is-preview .Example__section__body {
-    padding: 0;
-  }
-  .vertical-nav {
-    min-height: 400px;
-  }
-}
+// .is-vertical-nav-page {
+//   .Example__section.is-preview .Example__section__body {
+//     padding: 0;
+//   }
+//   .vertical-nav {
+//     min-height: 400px;
+//   }
+// }
 
 .is-notification-drawer-documentation {
   .Example__section.is-preview .Example__section__body {
-    position: relative;
-    height: 400px;
-    padding: 0;
+    // position: relative;
+    // height: 400px;
+    // padding: 0;
   }
 }
 
 .is-bullseye-documentation {
   .Example__section.is-preview .Example__section__body {
-    position: relative;
-    height: 400px;
-    padding: 0;
+    // position: relative;
+    // height: 400px;
+    // padding: 0;
   }
   .bullseye.is-full-page {
-    position: absolute;
-    height: 100%;
-    width: 100%;
+    // position: absolute;
+    // height: 100%;
+    // width: 100%;
   }
   .bullseye,
   .bullseye > * {

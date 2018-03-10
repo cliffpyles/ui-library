@@ -17,6 +17,9 @@
   &__toolbar {
     padding: 0 1rem;
   }
+  &__section {
+    // max-width: 100%;
+  }
   &__section:not(:last-of-type) {
     margin-bottom: 1rem;
   }

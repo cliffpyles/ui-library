@@ -41,6 +41,8 @@ $modal__dialog__footer--Color: #000 !default;
   top: 0;
   width: 100vw;
   height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
   margin: 0;
   padding: $modal--Padding;
   border: $modal--Border;

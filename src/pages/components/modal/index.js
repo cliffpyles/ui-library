@@ -6,12 +6,12 @@ import Modal, {ModalDialogHeader, ModalDialogBody, ModalDialogFooter} from '@com
 export default () => {
   return (
     <Documentation className="is-modal-page">
-      <Example heading="Modal">
+      <Example heading="Modal" isViewport={true}>
         <Modal>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </Modal>
       </Example>
-      <Example heading="Modal with Sections">
+      <Example heading="Modal with Sections" isViewport={true}>
         <Modal>
           <ModalDialogHeader>
             <p>Header Content</p>
