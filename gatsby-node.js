@@ -9,6 +9,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
   const PATTERNS_BASE_DIR = path.resolve(__dirname, './src/library/patterns')
   const COMPONENTS_BASE_DIR = path.resolve(__dirname, './src/library/components')
   const LAYOUTS_BASE_DIR = path.resolve(__dirname, './src/library/layouts')
+  const VIEWS_BASE_DIR = path.resolve(__dirname, './src/library/views')
   const isMarkdown = (node.internal.type === 'MarkdownRemark')
 
   if (isMarkdown) {
@@ -16,6 +17,7 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
     const isPattern = (node.fileAbsolutePath.includes(PATTERNS_BASE_DIR))
     const isComponent = (node.fileAbsolutePath.includes(COMPONENTS_BASE_DIR))
     const isLayout = (node.fileAbsolutePath.includes(LAYOUTS_BASE_DIR))
+    const isView = (node.fileAbsolutePath.includes(VIEWS_BASE_DIR))
 
     if (isPage) {
       let relativePath = path.relative(PAGES_BASE_DIR, node.fileAbsolutePath)
@@ -44,6 +46,13 @@ exports.onCreateNode = ({ node, boundActionCreators }) => {
       createNodeField({ node, name: 'path', value: pagePath })
       createNodeField({ node, name: 'type', value: 'documentation' })
       createNodeField({ node, name: 'contentType', value: 'layout' })
+    }  else if (isView) {
+      let viewName = path.basename(path.dirname(node.fileAbsolutePath))
+      let viewSlug = inflection.dasherize(viewName)
+      let pagePath = `/views/${viewName}/docs`
+      createNodeField({ node, name: 'path', value: pagePath })
+      createNodeField({ node, name: 'type', value: 'documentation' })
+      createNodeField({ node, name: 'contentType', value: 'view' })
     }
   }
 }
@@ -86,8 +95,8 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
 exports.onCreatePage = async ({ page, boundActionCreators }) => {
   const { createPage, createNodeField } = boundActionCreators
-  const CATEGORY_PAGE_REGEX = /^\/(components|patterns|layouts)\/$/
-  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns|layouts)\/([A-Za-z0-9_-]+)/
+  const CATEGORY_PAGE_REGEX = /^\/(components|patterns|layouts|views)\/$/
+  const CATEGORY_CHILD_PAGE_REGEX = /^\/(components|patterns|layouts|views)\/([A-Za-z0-9_-]+)/
   const DEMO_PAGE_REGEX = /^\/(demos)\/([A-Za-z0-9_-]+)/
   return new Promise((resolve, reject) => {
     let isCategoryPage = page.path.match(CATEGORY_PAGE_REGEX)
