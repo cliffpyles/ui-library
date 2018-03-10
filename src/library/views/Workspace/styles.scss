@@ -1,0 +1,90 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$workspace--Padding: $unit-s !default;
+$workspace--Border: 1px solid #000 !default;
+$workspace--BackgroundColor: #fff !default;
+$workspace--Color: #000 !default;
+
+$workspace__header--Padding: $unit-s !default;
+$workspace__header--Border: 1px solid #000 !default;
+$workspace__header--BackgroundColor: #fff !default;
+$workspace__header--Color: #000 !default;
+
+$workspace__main--Padding: $unit-s !default;
+$workspace__main--Border: 1px solid #000 !default;
+$workspace__main--BackgroundColor: #fff !default;
+$workspace__main--Color: #000 !default;
+
+$workspace__sidebar--Padding: $unit-s !default;
+$workspace__sidebar--Border: 1px solid #000 !default;
+$workspace__sidebar--BackgroundColor: #fff !default;
+$workspace__sidebar--Color: #000 !default;
+
+$workspace__pane--Padding: $unit-s !default;
+$workspace__pane--Border: 1px solid #000 !default;
+$workspace__pane--BackgroundColor: #fff !default;
+$workspace__pane--Color: #000 !default;
+
+$workspace__footer--Padding: $unit-s !default;
+$workspace__footer--Border: 1px solid #000 !default;
+$workspace__footer--BackgroundColor: #fff !default;
+$workspace__footer--Color: #000 !default;
+
+.workspace {
+  display: grid;
+  grid-template-areas:
+    "workspace-header workspace-header workspace-header"
+    "workspace-sidebar workspace-main workspace-main"
+    "workspace-footer workspace-footer workspace-footer";
+  height: 100vh;
+  width: 100vw;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: $workspace--Padding;
+  border: $workspace--Border;
+  background-color: $workspace--BackgroundColor;
+  color: $workspace--Color;
+
+  &__header {
+    grid-area: workspace-header;
+    padding: $workspace__header--Padding;
+    border: $workspace__header--Border;
+    background-color: $workspace__header--BackgroundColor;
+    color: $workspace__header--Color;
+  }
+  &__main {
+    grid-area: workspace-main;
+    padding: $workspace__main--Padding;
+    border: $workspace__main--Border;
+    background-color: $workspace__main--BackgroundColor;
+    color: $workspace__main--Color;
+  }
+  &__sidebar {
+    grid-area: workspace-sidebar;
+    padding: $workspace__sidebar--Padding;
+    border: $workspace__sidebar--Border;
+    background-color: $workspace__sidebar--BackgroundColor;
+    color: $workspace__sidebar--Color;
+  }
+  &__footer {
+    grid-area: workspace-footer;
+    padding: $workspace__footer--Padding;
+    border: $workspace__footer--Border;
+    background-color: $workspace__footer--BackgroundColor;
+    color: $workspace__footer--Color;
+  }
+  &__pane {
+    grid-area: workspace-pane;
+    padding: $workspace__pane--Padding;
+    border: $workspace__pane--Border;
+    background-color: $workspace__pane--BackgroundColor;
+    color: $workspace__pane--Color;
+  }
+}
