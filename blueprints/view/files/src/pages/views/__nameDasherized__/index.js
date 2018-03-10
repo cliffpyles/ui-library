@@ -6,7 +6,7 @@ import {{moduleName}}, {Docs} from '@components/{{moduleName}}'
 export default () => {
   return (
     <Documentation docs={Docs}>
-      <Example heading="{{moduleName}}">
+      <Example heading="{{moduleName}}" isViewport={true}>
         <{{moduleName}}>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </{{moduleName}}>

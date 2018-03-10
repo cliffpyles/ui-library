@@ -6,7 +6,7 @@ import {{moduleName}}, {Docs} from '@patterns/{{moduleName}}'
 export default () => {
   return (
     <Documentation docs={Docs}>
-      <Example heading="{{moduleName}} Example">
+      <Example heading="{{moduleName}}">
         <{{moduleName}}>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
         </{{moduleName}}>
