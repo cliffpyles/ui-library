@@ -146,6 +146,7 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
         '@patterns': path.resolve(__dirname, './src/library/patterns'),
         '@components': path.resolve(__dirname, './src/library/components'),
         '@layouts': path.resolve(__dirname, './src/library/layouts'),
+        '@views': path.resolve(__dirname, './src/library/views'),
         '@project': path.resolve(__dirname, './src')
       }
     },

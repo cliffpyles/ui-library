@@ -1,7 +1,7 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import {{moduleName}} from '@components/{{moduleName}}'
+import {{moduleName}} from '@views/{{moduleName}}'
 
 export default () => {
   return (
