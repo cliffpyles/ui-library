@@ -17,7 +17,7 @@ export default ({children}) => {
 
   return (
     <div className="GeneratedSource">
-      <h4 className="GeneratedSource_heading">Code</h4>
+      <h4 className="GeneratedSource_heading">HTML</h4>
       <div className="GeneratedSource__body">
         <pre className="GeneratedSource__pre">
           <PrismCode className="language-html">
