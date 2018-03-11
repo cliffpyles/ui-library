@@ -26,6 +26,26 @@ $panel__footer--Border: 1px solid #000 !default;
 $panel__footer--BackgroundColor: #fff !default;
 $panel__footer--Color: #000 !default;
 
+$panel__group--Padding: $unit-s !default;
+$panel__group--Border: 1px solid #000 !default;
+$panel__group--BackgroundColor: #fff !default;
+$panel__group--Color: #000 !default;
+
+$panel__group__header--Padding: $unit-s !default;
+$panel__group__header--Border: 1px solid #000 !default;
+$panel__group__header--BackgroundColor: #fff !default;
+$panel__group__header--Color: #000 !default;
+
+$panel__group__body--Padding: $unit-s !default;
+$panel__group__body--Border: 1px solid #000 !default;
+$panel__group__body--BackgroundColor: #fff !default;
+$panel__group__body--Color: #000 !default;
+
+$panel_toggle--Padding: $unit-s !default;
+$panel_toggle--Border: 1px solid #000 !default;
+$panel_toggle--BackgroundColor: #fff !default;
+$panel_toggle--Color: #000 !default;
+
 .panel {
   display: flex;
   flex-direction: column;
@@ -36,6 +56,9 @@ $panel__footer--Color: #000 !default;
   color: $panel--Color;
 
   &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: $panel__header--Padding;
     border: $panel__header--Border;
     background-color: $panel__header--BackgroundColor;
@@ -53,20 +76,46 @@ $panel__footer--Color: #000 !default;
     background-color: $panel__footer--BackgroundColor;
     color: $panel__footer--Color;
   }
-  &.is-right {
-    position: fixed;
-    top: 0;
-    right: 0;
-    height: 100vh;
-    max-height: 100%;
-    width: 300px;
+  &__group {
+    padding: $panel__group--Padding;
+    border: $panel__group--Border;
+    background-color: $panel__group--BackgroundColor;
+    color: $panel__group--Color;
   }
-  &.is-left {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    max-height: 100%;
-    width: 300px;
+  &__group__header {
+    padding: $panel__group__header--Padding;
+    border: $panel__group__header--Border;
+    background-color: $panel__group__header--BackgroundColor;
+    color: $panel__group__header--Color;
+  }
+  &__group__body {
+    padding: $panel__group__body--Padding;
+    border: $panel__group__body--Border;
+    background-color: $panel__group__body--BackgroundColor;
+    color: $panel__group__body--Color;
+  }
+  &_toggle {
+    padding: $panel_toggle--Padding;
+    border: $panel_toggle--Border;
+    background-color: $panel_toggle--BackgroundColor;
+    color: $panel_toggle--Color;
+  }
+
+  &.is-collapsed {
+    align-items: flex-end;
+  }
+  &.is-collapsed > &__header {
+    overflow: hidden;
+  }
+  &.is-collapsed > &__body {
+    width: 0;
+    padding: 0;
+    border-width: 0;
+    overflow: hidden;
+  }
+  &.is-collapsed &__header_title {
+    margin-left: 100%;
+    width: 0;
+    white-space: nowrap;
   }
 }
