@@ -7,7 +7,7 @@ import Workspace, {
   WorkspaceSidebar,
   WorkspaceMain,
   WorkspaceFooter
-} from '@views/Workspace'
+} from '@layouts/Workspace'
 
 export default () => {
   return (
