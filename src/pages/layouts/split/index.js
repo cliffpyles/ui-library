@@ -1,36 +1,22 @@
 import React from 'react'
 import Documentation from '@systemComponents/Documentation'
 import Example from '@systemComponents/Example'
-import Split from '@layouts/Split'
+import Split, {SplitItem} from '@layouts/Split'
 
 export default () => {
   return (
     <Documentation className="is-split-page">
-      <Example heading="Split Example - Default">
+      <Example heading="Split">
         <Split>
-          <div>
-            Secondary content area.
-          </div>
-          <div>
-            <p> Main Content Area. Expands to full-width of the container, minus the width of the secondary content area(s).</p>
-          </div>
-          <div>
-            Secondary content area.
-          </div>
-        </Split>
-      </Example>
-
-      <Example heading="Split Example - Explicit Content Areas">
-        <Split>
-          <div className="split__main">
-            <p> Main Content Area. Expands to full-width of the container, minus the width of the secondary content area(s).</p>
-          </div>
-          <div className="split__secondary">
-            Secondary content area.
-          </div>
-          <div className="split__secondary">
-            Secondary content area.
-          </div>
+          <SplitItem>
+            <p>Content Area</p>
+          </SplitItem>
+          <SplitItem className="is-first">
+            <p>First Content Area</p>
+          </SplitItem>
+          <SplitItem className="is-last">
+            <p>Last Content Area</p>
+          </SplitItem>
         </Split>
       </Example>
     </Documentation>

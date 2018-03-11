@@ -3,12 +3,14 @@
   padding: 0;
   margin: 0;
 
-  > :nth-child(2),
-  > .split__main {
+  > .split__item {
     flex: 1;
+    order: 2;
   }
-  > .split__secondary,
-  > .split__secondary:nth-child(2) {
-    flex: 0 1 auto;
+  > .split__item.is-first {
+    order: 1;
+  }
+  > .split__item.is-last {
+    order: 3;
   }
 }
