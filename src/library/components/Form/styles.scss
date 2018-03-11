@@ -1,0 +1,100 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$form--Padding: $unit-s !default;
+$form--Border: 1px solid #000 !default;
+$form--BackgroundColor: #fff !default;
+$form--Color: #000 !default;
+
+$form__control--not-last-child--MarginBottom: $unit-s !default;
+$form__control--Padding: $unit-s !default;
+$form__control--Border: 1px solid #000 !default;
+$form__control--BackgroundColor: #fff !default;
+$form__control--Color: #000 !default;
+
+$form__control_label--Padding: $unit-xs 0 !default;
+$form__control_label--FontWeight: 700 !default;
+
+$form__control_input--Padding: $unit-s !default;
+$form__control_input--Border: 1px solid #000 !default;
+$form__control_input--BackgroundColor: #fff !default;
+$form__control_input--Color: #000 !default;
+
+$form__control_textarea--Padding: $unit-s !default;
+$form__control_textarea--Border: 1px solid #000 !default;
+$form__control_textarea--BackgroundColor: #fff !default;
+$form__control_textarea--Color: #000 !default;
+
+$form__control_select--Padding: $unit-s !default;
+$form__control_select--Border: 1px solid #000 !default;
+$form__control_select--BackgroundColor: #fff !default;
+$form__control_select--Color: #000 !default;
+
+.form {
+  margin: 0;
+  padding: $form--Padding;
+  border: $form--Border;
+  background-color: $form--BackgroundColor;
+  color: $form--Color;
+
+  &__control {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0;
+    padding: $form__control--Padding;
+    border: $form__control--Border;
+    background-color: $form__control--BackgroundColor;
+    color: $form__control--Color;
+  }
+  &__control:not(:last-child) {
+    margin-bottom: $form__control--not-last-child--MarginBottom;
+  }
+  &__control > label {
+    padding: $form__control_label--Padding;
+    line-height: 1;
+    font-weight: $form__control_label--FontWeight;
+  }
+  &__control > input {
+    // display: block;
+    width: 100%;
+    padding: $form__control_input--Padding;
+    border: $form__control_input--Border;
+    background-color: $form__control_input--BackgroundColor;
+    color: $form__control_input--Color;
+  }
+  &__control > input[type='checkbox'],
+  &__control > input[type='radio'],
+  &__control > input[type='submit'],
+  &__control > input[type='button'] {
+    width: auto;
+  }
+  &__control > label + input[type='checkbox'],
+  &__control > label + input[type='radio'] {
+    order: -1;
+    margin-right: 0.25em;
+  }
+  &__control > input[type='checkbox'] + label,
+  &__control > input[type='radio'] + label {
+    margin-left: 0.25em;
+  }
+  &__control > textarea {
+    width: 100%;
+    padding: $form__control_textarea--Padding;
+    border: $form__control_textarea--Border;
+    background-color: $form__control_textarea--BackgroundColor;
+    color: $form__control_textarea--Color;
+  }
+  &__control > select {
+    width: 100%;
+    padding: $form__control_select--Padding;
+    border: $form__control_select--Border;
+    background-color: $form__control_select--BackgroundColor;
+    color: $form__control_select--Color;
+  }
+}
