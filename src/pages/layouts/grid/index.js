@@ -5,7 +5,7 @@ import Grid from '@layouts/Grid'
 
 export default () => {
   return (
-    <Documentation className="is-grid-page">
+    <Documentation className="is-layout-documentation">
       <Example heading="Grid Example">
         <Grid>
           <div>

@@ -5,7 +5,7 @@ import Level from '@layouts/Level'
 
 export default () => {
   return (
-    <Documentation className="is-level-page">
+    <Documentation className="is-layout-documentation">
       <Example heading="Level">
         <Level>
           <div>

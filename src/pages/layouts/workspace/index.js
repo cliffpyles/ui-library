@@ -11,7 +11,7 @@ import Workspace, {
 
 export default () => {
   return (
-    <Documentation>
+    <Documentation className="is-layout-documentation">
       <Example heading="Workspace" isViewport={true}>
         <Workspace>
           <WorkspaceHeader></WorkspaceHeader>

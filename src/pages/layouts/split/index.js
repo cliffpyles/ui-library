@@ -5,7 +5,7 @@ import Split, {SplitItem} from '@layouts/Split'
 
 export default () => {
   return (
-    <Documentation className="is-split-page">
+    <Documentation className="is-layout-documentation">
       <Example heading="Split">
         <Split>
           <SplitItem>

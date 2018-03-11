@@ -5,7 +5,7 @@ import Spaced from '@layouts/Spaced'
 
 export default () => {
   return (
-    <Documentation className="is-spaced-documentation">
+    <Documentation className="is-layout-documentation">
       <Example heading="Spaced Layout">
         <Spaced>
           <p>Content Area</p>
