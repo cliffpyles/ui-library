@@ -1,0 +1,12 @@
+.media-object {
+  display: flex;
+  &__content {
+    flex: 1 1 auto;
+  }
+  &__left {
+    flex: 0 0 auto;
+  }
+  &__right {
+    flex: 0 0 auto;
+  }
+}
