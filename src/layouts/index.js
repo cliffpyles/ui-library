@@ -41,10 +41,12 @@ export default ({ children, data }) => {
         <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
       </Helmet>
       <header className="layout__header">
-        <h1>
+        <h1 className="layout__header_site-name">
           <Link to="/">{site.name}</Link>
         </h1>
-        <Navigation links={allPages.page} isHorizontal={true}/>
+        <div className="layout__header__toolbar">
+          <Navigation links={allPages.page} isHorizontal={true}/>
+        </div>
       </header>
       <main className="layout__main">
         <div className="layout__sidebar">
