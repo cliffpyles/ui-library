@@ -1,0 +1,61 @@
+$unit-xxs: 2px !default;
+$unit-xs: 4px !default;
+$unit-s: 8px !default;
+$unit-m: 16px !default;
+$unit-l: 32px !default;
+$unit-xl: 64px !default;
+$unit-xxl: 128px !default;
+
+$auto-suggest--Padding: $unit-s !default;
+$auto-suggest--Border: 1px solid #000 !default;
+$auto-suggest--BackgroundColor: #fff !default;
+$auto-suggest--Color: #000 !default;
+
+$auto-suggest_input--Padding: $unit-s !default;
+$auto-suggest_input--Border: 1px solid #000 !default;
+$auto-suggest_input--BackgroundColor: #fff !default;
+$auto-suggest_input--Color: #000 !default;
+
+$auto-suggest__suggestions--Padding: $unit-s !default;
+$auto-suggest__suggestions--Border: 1px solid #000 !default;
+$auto-suggest__suggestions--BackgroundColor: #fff !default;
+$auto-suggest__suggestions--Color: #000 !default;
+
+$auto-suggest__suggestion--Padding: $unit-s !default;
+$auto-suggest__suggestion--Border: 1px solid #000 !default;
+$auto-suggest__suggestion--BackgroundColor: #fff !default;
+$auto-suggest__suggestion--Color: #000 !default;
+
+.auto-suggest {
+  display: block;
+  margin: 0;
+  padding: $auto-suggest--Padding;
+  border: $auto-suggest--Border;
+  background-color: $auto-suggest--BackgroundColor;
+  color: $auto-suggest--Color;
+
+  &_input {
+    display: block;
+    width: 100%;
+    padding: $auto-suggest_input--Padding;
+    border: $auto-suggest_input--Border;
+    background-color: $auto-suggest_input--BackgroundColor;
+    color: $auto-suggest_input--Color;
+  }
+  &_input:focus {
+    outline: 0;
+  }
+  &__suggestions {
+    list-style-type: none;
+    padding: $auto-suggest__suggestions--Padding;
+    border: $auto-suggest__suggestions--Border;
+    background-color: $auto-suggest__suggestions--BackgroundColor;
+    color: $auto-suggest__suggestions--Color;
+  }
+  &__suggestion {
+    padding: $auto-suggest__suggestion--Padding;
+    border: $auto-suggest__suggestion--Border;
+    background-color: $auto-suggest__suggestion--BackgroundColor;
+    color: $auto-suggest__suggestion--Color;
+  }
+}
