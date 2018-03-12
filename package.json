@@ -5,6 +5,7 @@
   "author": "Cliff Pyles",
   "dependencies": {
     "bulma": "^0.6.0",
+    "comment-parser": "^0.5.0",
     "gatsby": "^1.9.63",
     "gatsby-cli": "^1.1.40",
     "gatsby-link": "^1.6.21",

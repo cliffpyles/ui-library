@@ -1,9 +1,9 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import Form, {FormControl} from '@components/Form'
 
-export default () => {
+export default ({data, docs}) => {
   return (
     <Documentation className="is-form-documentation">
       <Example heading="Form">

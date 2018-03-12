@@ -1,11 +1,11 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import CardView from '@patterns/CardView'
 
-export default () => {
+export default ({data, docs}) => {
   return (
-    <Documentation>
+    <Documentation docs={docs}>
       <Example heading="Card View">
         <CardView />
       </Example>

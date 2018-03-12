@@ -1,5 +1,5 @@
 import React from 'react'
-import docs from './docs.md'
+
 import './styles.scss'
 
 export const SplitItem = ({children, className = ''}) => {

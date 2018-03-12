@@ -1,9 +1,9 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import Modal, {ModalDialogHeader, ModalDialogBody, ModalDialogFooter} from '@components/Modal'
 
-export default () => {
+export default ({data, docs}) => {
   return (
     <Documentation className="is-modal-page">
       <Example heading="Modal" isViewport={true}>

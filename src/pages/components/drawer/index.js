@@ -1,9 +1,9 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import Drawer from '@components/Drawer'
 
-export default () => {
+export default ({data, docs}) => {
   return (
     <Documentation className="is-drawer-page">
       <Example heading="Drawer" isViewport={true}>

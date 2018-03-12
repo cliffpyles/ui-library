@@ -5,7 +5,40 @@
     font-weight: 700;
   }
   &__section {}
-  &__section + &__section {
-    margin-top: 1rem;
+  &__section:not(:last-child) {
+    margin-bottom: 1rem;
   }
+  &__variables {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &__variable {
+    flex: 1 1 50%;
+    padding: .5rem;
+  }
+  &__variable:not(:last-child) {
+  }
+  &__variable_name {
+    font-weight: 800;
+    white-space: nowrap;
+  }
+  &__variable_default-value {
+    white-space: nowrap;
+    padding-left: .25em;
+  }
+  &__tag {
+    display: flex;
+  }
+  &__tag:not(:last-child) {
+    margin-bottom: .25em;
+  }
+  &__tag > * {
+    padding: 0 .25em;
+  }
+  &__tag_name {
+    font-weight: 800;
+  }
+  &__tag_description {}
+  &__tag_optional {}
+  &__tag_type {}
 }

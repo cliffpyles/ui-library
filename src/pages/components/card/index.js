@@ -1,13 +1,13 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import Card, {Docs, CardHeader, CardBody, CardFooter} from '@components/Card'
 
-export default () => {
+export default ({data, docs}) => {
   const Docs = ''
 
   return (
-    <Documentation>
+    <Documentation docs={docs}>
       <Example heading="Card">
         <Card>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum quae odio sed veniam. Fugit perspiciatis quaerat laborum corrupti quo repudiandae, fugiat placeat sapiente blanditiis totam incidunt eum, quis excepturi voluptas?</p>

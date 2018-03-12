@@ -1,13 +1,13 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import MediaObject, {
   MediaObjectLeft,
   MediaObjectRight,
   MediaObjectContent
 } from '@layouts/MediaObject'
 
-export default () => {
+export default ({data, docs}) => {
   return (
     <Documentation className="is-layout-documentation">
       <Example heading="Media Object">

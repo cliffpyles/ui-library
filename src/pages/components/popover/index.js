@@ -1,11 +1,11 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import Popover from '@components/Popover'
 
-export default () => {
+export default ({data, docs}) => {
   return (
-    <Documentation>
+    <Documentation docs={docs}>
       <Example heading="Popover Above">
         <Popover className="is-above" message="Message to show above the text">Click to Show</Popover>
       </Example>

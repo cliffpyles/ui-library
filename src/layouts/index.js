@@ -2,33 +2,49 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import Link from 'gatsby-link'
-import Navigation from '@systemComponents/Navigation'
+import Navigation from '@system/Navigation'
+import {DocumentationIndex, DocumentationSingle} from '@system/fragments'
 
 import 'prismjs/themes/prism-coy.css'
 import '../base.scss'
 import '../workspace.scss'
 
-export default ({ children, data }) => {
-  let allPages = data.allSitePage.edges.reduce((accum, edge) => {
-    let type = edge.node.context.type || 'page'
+export default (props) => {
+  const { children, data, location } = props
+  let newProps = { ...props }
 
-    if (!accum[type]) {
-      accum[type] = []
-    }
+  let allDocumentation = data.allDocumentation.edges.reduce((accum, edge) => {
+    let { moduleSource,
+          moduleDocs,
+          moduleVariables,
+          moduleName,
+          moduleSlug,
+          moduleCategory,
+          moduleType,
+          modulePath } = edge.node
+    moduleDocs = JSON.parse(moduleDocs)
+    moduleVariables = JSON.parse(moduleVariables)
 
-    if (edge.node.context.name == null ) {
-      let bestGuessName = edge.node.path.match(/\/([A-Za-z0-9_-]+)$/g)[0].substring(1)
-      bestGuessName = bestGuessName.replace(/-/g, ' ')
-
-      if(bestGuessName !== 'docs') {
-        edge.node.context.name = bestGuessName
+    if (location.pathname === modulePath) {
+      newProps.docs = {
+        moduleSource,
+        moduleDocs,
+        moduleVariables,
+        moduleName,
+        moduleSlug,
+        moduleCategory,
+        moduleType,
+        modulePath
       }
     }
 
-    accum[type].push({
-      path: edge.node.path,
-      text: edge.node.context.name,
-      className: `is-${type}`
+    if (!accum[moduleCategory]) {
+      accum[moduleCategory] = []
+    }
+
+    accum[moduleCategory].push({
+      path: `${modulePath}`,
+      text: moduleName
     })
     return accum
   }, {})
@@ -44,54 +60,43 @@ export default ({ children, data }) => {
         <h1 className="layout__header_site-name">
           <Link to="/">{site.name}</Link>
         </h1>
-        <div className="layout__header__toolbar">
-          <Navigation links={allPages.page} isHorizontal={true}/>
-        </div>
+        <div className="layout__header__toolbar"></div>
       </header>
       <main className="layout__main">
         <div className="layout__sidebar">
           <div className="layout__sidebar__item">
             <h3 className="layout__sidebar_heading">Components</h3>
-            <Navigation links={allPages.component} />
+            <Navigation links={allDocumentation.components} />
           </div>
           <div className="layout__sidebar__item">
             <h3 className="layout__sidebar_heading">Layouts</h3>
-            <Navigation links={allPages.layout} />
+            <Navigation links={allDocumentation.layouts} />
           </div>
           <div className="layout__sidebar__item">
             <h3 className="layout__sidebar_heading">Views</h3>
-            <Navigation links={allPages.view} />
+            <Navigation links={allDocumentation.views} />
           </div>
         </div>
         <div className="layout__content">
-          {children()}
+          {children(newProps)}
         </div>
       </main>
     </div>
   )
 }
 
-export const indexPageQuery = graphql`
-  query IndexPageQuery {
+export const LayoutPageQuery = graphql`
+  query LayoutPageQuery {
     site {
       siteMetadata {
         name
         title
       }
     }
-    allSitePage(
-      filter: { path: { regex: "/^((?!(404)).)*$/" } }
-    ) {
+    allDocumentation {
       edges {
         node {
-          path
-          context {
-            type
-            category
-            slug
-            name
-            title
-          }
+          ...DocumentationIndex
         }
       }
     }

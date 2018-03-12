@@ -2,8 +2,6 @@ import React from 'react'
 import docs from './docs.md'
 import './styles.scss'
 
-
-
 export class AccordionItem extends React.Component {
   constructor (props) {
     super(props)

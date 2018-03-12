@@ -1,13 +1,13 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import VerticalNav, {
   VerticalNavItem,
   VerticalNavMenu,
   Docs
 } from '@components/VerticalNav'
 
-export default () => {
+export default ({data, docs}) => {
   return (
     <Documentation className="is-vertical-nav-page">
       <Example heading="Vertical Nav" isViewport={true}>

@@ -1,9 +1,9 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import Split, {SplitItem} from '@layouts/Split'
 
-export default () => {
+export default ({data, docs}) => {
   return (
     <Documentation className="is-layout-documentation">
       <Example heading="Split">

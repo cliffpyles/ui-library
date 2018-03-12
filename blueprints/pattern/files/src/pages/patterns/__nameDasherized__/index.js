@@ -1,6 +1,6 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import {{moduleName}} from '@patterns/{{moduleName}}'
 
 export default () => {

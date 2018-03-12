@@ -3,7 +3,7 @@ import ReactDOMServer from 'react-dom/server'
 import Prism from 'prismjs'
 import PrismCode from 'react-prism'
 import pretty from 'pretty'
-import CodepenButton from '@systemComponents/CodepenButton'
+import CodepenButton from '@system/CodepenButton'
 
 import './styles.scss'
 import 'prismjs/themes/prism-coy.css'

@@ -1,11 +1,11 @@
 import React from 'react'
-import Documentation from '@systemComponents/Documentation'
-import Example from '@systemComponents/Example'
+import Documentation from '@system/Documentation'
+import Example from '@system/Example'
 import Badge from '@components/Badge'
 
-export default () => {
+export default ({data, docs}) => {
   return (
-    <Documentation>
+    <Documentation docs={docs}>
       <Example heading="Badge">
         <Badge>example</Badge>
       </Example>

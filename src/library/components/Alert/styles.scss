@@ -12,6 +12,16 @@ $alert--Border: 1px solid #000 !default;
 $alert--BackgroundColor: #efefef !default;
 $alert--Color: #000 !default;
 
+/**
+ * Notifies users of context specific information
+ * @block [message] The main body for the alert
+ * @element [close-button] Used to dismiss the alert
+ * @modifier [is-info] Information that is for general knowledge
+ * @modifier [is-success] Information that indicates something succeeded
+ * @modifier [is-warning] Information that is important but not critical
+ * @modifier [is-critical] Information that is critical
+ * @modifier [is-error] Information related to an error
+ */
 .alert {
   display: flex;
   justify-content: space-between;
