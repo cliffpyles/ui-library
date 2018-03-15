@@ -35,41 +35,49 @@ const DocumentationTagSection = ({baseKey, tags, title}) => {
   )
 }
 export default ({children, className = '', docs}) => {
-  let {modulePath} = docs
-  let {tags, description, source} = docs.moduleDocs
-  let {
-    block:blocks = [],
-    element:elements = [],
-    modifier:modifiers = []
-  } = tags
-  let hasBlocks = (blocks.length > 0)
-  let hasElements = (elements.length > 0)
-  let hasModifiers = (modifiers.length > 0)
+  if (docs) {
+    let {modulePath} = docs
+    let {tags, description, source} = docs.moduleDocs
+    let {
+      block:blocks = [],
+      element:elements = [],
+      modifier:modifiers = []
+    } = tags
+    let hasBlocks = (blocks.length > 0)
+    let hasElements = (elements.length > 0)
+    let hasModifiers = (modifiers.length > 0)
 
-  return (
-    <div className={`Documentation ${className}`}>
-      <h3 className="Documentation_heading">{docs.moduleName}</h3>
-      <p className="Documentation_subtitle">{docs.moduleDocs.description}</p>
-      <div className="Documentation__section">
-        {children}
-      </div>
+    return (
+      <div className={`Documentation ${className}`}>
+        <h3 className="Documentation_heading">{docs.moduleName}</h3>
+        <p className="Documentation_subtitle">{docs.moduleDocs.description}</p>
+        <div className="Documentation__section">
+          {children}
+        </div>
 
-      {hasModifiers && <DocumentationTagSection baseKey={modulePath} tags={modifiers} title='Modifiers' />}
+        {hasModifiers && <DocumentationTagSection baseKey={modulePath} tags={modifiers} title='Modifiers' />}
 
-      {hasBlocks && <DocumentationTagSection baseKey={modulePath} tags={blocks} title='Blocks' />}
+        {hasBlocks && <DocumentationTagSection baseKey={modulePath} tags={blocks} title='Blocks' />}
 
-      {hasElements && <DocumentationTagSection baseKey={modulePath} tags={elements} title='Elements' />}
+        {hasElements && <DocumentationTagSection baseKey={modulePath} tags={elements} title='Elements' />}
 
-      <h3 className="Documentation_heading">Theme Variables</h3>
-      <div className="Documentation__section">
-        <div className="Documentation__variables">
-          {docs.moduleVariables.map(variable =>
-            <DocumentationModuleVariable
-              key={`${docs.modulePath}-${variable.name}`}
-              name={variable.name}
-              defaultValue={variable.defaultValue} />)}
+        <h3 className="Documentation_heading">Theme Variables</h3>
+        <div className="Documentation__section">
+          <div className="Documentation__variables">
+            {docs.moduleVariables.map(variable =>
+              <DocumentationModuleVariable
+                key={`${docs.modulePath}-${variable.name}`}
+                name={variable.name}
+                defaultValue={variable.defaultValue} />)}
+          </div>
         </div>
       </div>
-    </div>
-  )
+    )
+  } else {
+    return (
+      <div className="Documentation">
+        <p className="Documentation_empty">Documentation not found</p>
+      </div>
+    )
+  }
 }
