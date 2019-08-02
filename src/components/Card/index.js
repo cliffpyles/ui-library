@@ -1,1 +1,1 @@
-export { default } from './Card'
+export { default, CardHeader, CardMain, CardFooter } from './Card'
