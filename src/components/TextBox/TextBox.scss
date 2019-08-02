@@ -1,0 +1,25 @@
+.TextBox {
+  font-size: var(--TextBox--font-size, 1.1rem);
+  min-width: 8em;
+  display: inline-block;
+  white-space: nowrap;
+  padding: var(--sUnit, 8px) var(--mUnit, 16px);
+  border: var(--TextBox--border, 1px solid currentColor);
+  border-radius: var(--TextBox--border-radius, 4px);
+  background: var(--TextBox--background, #fff);
+  outline: 0;
+  color: var(--TextBox--color, #555);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: var(--TextBox--hover--background, #fafafa);
+    color: var(--TextBox--hover--color, #333);
+  }
+
+  &:focus {
+    box-shadow: var(
+      --TextBox--focus--box-shadow,
+      0px 1px 2px rgba(0, 0, 0, 0.1)
+    );
+  }
+}
