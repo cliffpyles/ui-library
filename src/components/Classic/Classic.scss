@@ -2,26 +2,16 @@
   width: 1440px;
   max-width: 100%;
   display: grid;
-
+  grid-template-columns: repeat(4, 1fr);
   &__header {
+    grid-column: 1 / -1;
   }
   &__footer {
+    grid-column: 1 / -1;
   }
   &__primary {
+    grid-column: 2 / 4;
   }
   &__secondary {
-  }
-}
-
-@media screen and (min-width: 640px) {
-  .Classic {
-    grid-template-columns: repeat(4, 1fr);
-    &__primary {
-      grid-column: 2 / 4;
-    }
-    &__header,
-    &__footer {
-      grid-column: 1 / -1;
-    }
   }
 }
