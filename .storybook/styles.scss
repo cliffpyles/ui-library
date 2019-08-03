@@ -21,7 +21,8 @@ body.sb-show-main {
   .Bullseye,
   .MediaObject,
   .Classic,
-  .TileGrid {
+  .TileGrid,
+  .Level {
     border: 7px dashed #2a2a2a;
     text-align: center;
   }
@@ -31,7 +32,8 @@ body.sb-show-main {
   .Classic__primary,
   .Classic__secondary,
   .Classic__footer,
-  .TileGrid > div {
+  .TileGrid > div,
+  .Level > div {
     background: #eaeaea;
     outline: 1px dashed #cacaca;
     padding: 1rem;
