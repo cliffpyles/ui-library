@@ -1,0 +1,4 @@
+.MediaObject {
+  display: grid;
+  grid-template-columns: minmax(0, 250px) minmax(0, 66%) minmax(0, 250px);
+}

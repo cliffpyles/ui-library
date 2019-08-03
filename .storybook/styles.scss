@@ -17,10 +17,12 @@ body.sb-show-main {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(0, 0, 0, 0.1);
   min-height: 50vh;
-  .Bullseye {
-    border: 3px dashed #232425;
+  .Bullseye,
+  .MediaObject {
+    border: 5px dashed #838485;
   }
-  .Bullseye__main {
-    border: 3px dashed #232425;
+  .Bullseye__main,
+  .MediaObject > div {
+    border: 5px dashed #232425;
   }
 }
