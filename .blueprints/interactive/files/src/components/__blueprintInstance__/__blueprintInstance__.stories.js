@@ -3,7 +3,7 @@ import React from 'react';
 import {{blueprintInstance}} from './{{blueprintInstance}}';
 
 export default {
-  title: 'Components|Interactive/{{blueprintInstance}}';
+  title: 'Components|Interactive/{{blueprintInstance}}'
 }
 
 const props = {
