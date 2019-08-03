@@ -1,16 +1,14 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
+import React from "react";
+import { action } from "@storybook/addon-actions";
 
-import Button from './Button';
+import Button from "./Button";
 
-export const actions = {
-  onClick: action('onClick'),
+const actions = {
+  onClick: action("onClick")
 };
 
-storiesOf('Button', module)
-  .add('default', () => (
-    <Button {...actions}>
-      button
-    </Button>
-  ));
+export default {
+  title: "Components|Interactive/Button"
+};
+
+export const Default = () => <Button {...actions}>button</Button>;

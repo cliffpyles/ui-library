@@ -1,13 +1,16 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
 import TextBox from "./TextBox";
 
-export const actions = {
-  onChange: action("onChange"),
-  onFocus: action("onFocus"),
-  onBlur: action("onBlur")
+export default {
+  title: "Components|Interactive/TextBox"
 };
 
-storiesOf("TextBox", module).add("default", () => <TextBox {...actions} />);
+const props = {
+  onChange: action("onChange"),
+  onFocus: action("onFocus"),
+  onBlur: action("onBlur"),
+  placeholder: "Enter search…"
+};
+export const Default = () => <TextBox {...props} />;
