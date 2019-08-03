@@ -16,13 +16,23 @@ body.sb-show-main {
   margin: 2rem;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(0, 0, 0, 0.1);
-  min-height: 50vh;
+  min-height: 75vh;
+
   .Bullseye,
-  .MediaObject {
-    border: 5px dashed #838485;
+  .MediaObject,
+  .Classic {
+    border: 7px dashed #2a2a2a;
+    text-align: center;
   }
   .Bullseye__main,
-  .MediaObject > div {
-    border: 5px dashed #232425;
+  .MediaObject > div,
+  .Classic__header,
+  .Classic__primary,
+  .Classic__secondary,
+  .Classic__footer {
+    background: #eaeaea;
+    outline: 1px dashed #cacaca;
+    padding: 1rem;
+    text-align: center;
   }
 }
