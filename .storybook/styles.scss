@@ -22,18 +22,17 @@ body.sb-show-main {
   .MediaObject,
   .Classic,
   .TileGrid,
-  .Level {
+  .Level,
+  .Column {
     border: 7px dashed #2a2a2a;
     text-align: center;
   }
-  .Bullseye__main,
+  .Bullseye > div,
   .MediaObject > div,
-  .Classic__header,
-  .Classic__primary,
-  .Classic__secondary,
-  .Classic__footer,
+  .Classic > div,
   .TileGrid > div,
-  .Level > div {
+  .Level > div,
+  .Column > div {
     background: #eaeaea;
     outline: 1px dashed #cacaca;
     padding: 1rem;

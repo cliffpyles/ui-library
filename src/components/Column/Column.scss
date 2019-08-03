@@ -1,0 +1,13 @@
+.Column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  &__header {
+  }
+  &__main {
+    flex: 1;
+  }
+  &__footer {
+  }
+}
