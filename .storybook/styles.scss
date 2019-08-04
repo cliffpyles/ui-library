@@ -17,13 +17,14 @@ body.sb-show-main {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
   border: 1px solid rgba(0, 0, 0, 0.1);
   min-height: 75vh;
-
+  font-size: 12px;
   .Bullseye,
   .MediaObject,
   .Classic,
   .TileGrid,
   .Level,
-  .Column {
+  .Column,
+  .Workspace {
     border: 7px dashed #2a2a2a;
     text-align: center;
   }
@@ -32,10 +33,17 @@ body.sb-show-main {
   .Classic > div,
   .TileGrid > div,
   .Level > div,
-  .Column > div {
+  .Column > div,
+  .Workspace > div {
     background: #eaeaea;
     outline: 1px dashed #cacaca;
     padding: 1rem;
     text-align: center;
+  }
+
+  .Workspace__context {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
   }
 }

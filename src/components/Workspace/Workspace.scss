@@ -1,0 +1,33 @@
+.Workspace {
+  flex: 1;
+  width: 1440px;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: 65px 215px auto minmax(min-content, 300px);
+  grid-auto-rows: minmax(150px, auto);
+
+  &__header {
+    grid-column: 3 / 5;
+    grid-row: 1;
+  }
+  &__footer {
+    grid-column: 3;
+    grid-row: 3;
+  }
+  &__main {
+    grid-column: 3;
+    grid-row: 2;
+  }
+  &__toolbar {
+    grid-column: 2;
+    grid-row: 1 / 4;
+  }
+  &__details {
+    grid-column: 4;
+    grid-row: 2 / 4;
+  }
+  &__context {
+    grid-column: 1;
+    grid-row: 1 / 4;
+  }
+}

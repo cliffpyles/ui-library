@@ -3,6 +3,7 @@
   max-width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+
   &__header {
     grid-column: 1 / -1;
   }
