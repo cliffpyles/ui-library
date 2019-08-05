@@ -1,0 +1,6 @@
+.{{blueprintInstance}} {
+  margin: 0;
+  padding: var(--mUnit, 16px);
+  line-height: var(--{{blueprintInstance}}--line-height, 1.2);
+  font-size: var(--{{blueprintInstance}}--font-size, 16px);
+}
