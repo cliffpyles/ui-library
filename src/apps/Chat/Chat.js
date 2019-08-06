@@ -8,27 +8,115 @@ import Workspace, {
   WorkspaceMain,
   WorkspaceToolbar
 } from "../../components/Workspace";
+import Heading from "../../components/Heading";
+import Comment from "../../components/Comment";
 import "./Chat.scss";
 
-const Chat = ({ children, className = "", style = {} }) => {
+const Channels = ({ channels = [] }) => {
+  return (
+    <div>
+      {channels.map(channel => {
+        return <div key={channel.id}>#{channel.name}</div>;
+      })}
+    </div>
+  );
+};
+
+const Contexts = ({ contexts = [] }) => {
+  return (
+    <div>
+      {contexts.map(context => {
+        return <div key={context.id}>{context.image}</div>;
+      })}
+    </div>
+  );
+};
+
+const Messages = ({ messages = [] }) => {
+  return (
+    <div>
+      {messages.map(message => {
+        return (
+          <div key={message.id}>
+            <Comment
+              author={message.author.name}
+              avatar={
+                <img alt={message.author.name} src={message.author.avatar} />
+              }
+              body={message.body}
+              createdAt={message.createdAt}
+              updatedAt={message.updatedAt}
+            >
+              {message.body}
+            </Comment>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const Chat = ({
+  className = "",
+  style = {},
+  mainHeading,
+  channels = [],
+  contexts = [],
+  messages = []
+}) => {
   return (
     <div className={`Chat ${className}`} style={style}>
       <Workspace>
-        <WorkspaceHeader>placeholder</WorkspaceHeader>
-        <WorkspaceToolbar>placeholder</WorkspaceToolbar>
-        <WorkspaceContext>placeholder</WorkspaceContext>
-        <WorkspaceMain>placeholder</WorkspaceMain>
-        <WorkspaceFooter>placeholder</WorkspaceFooter>
-        <WorkspaceDetails>placeholder</WorkspaceDetails>
+        <WorkspaceContext>
+          <Contexts contexts={contexts} />
+        </WorkspaceContext>
+        <WorkspaceHeader>header</WorkspaceHeader>
+        <WorkspaceToolbar>
+          <Heading element="h5">Channels</Heading>
+          <Channels channels={channels} />
+        </WorkspaceToolbar>
+        <WorkspaceMain>
+          <Heading element="h2">{mainHeading}</Heading>
+          <Messages messages={messages} />
+        </WorkspaceMain>
+        <WorkspaceFooter>footer</WorkspaceFooter>
+        <WorkspaceDetails>details</WorkspaceDetails>
       </Workspace>
     </div>
   );
 };
 
 Chat.propTypes = {
-  children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
+  mainHeading: PropTypes.string.isRequired,
+  channels: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired
+    })
+  ),
+  contexts: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+      image: PropTypes.node.isRequired
+    })
+  ),
+  messages: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      body: PropTypes.string.isRequired,
+      author: PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        name: PropTypes.string.isRequired,
+        username: PropTypes.string.isRequired,
+        avatar: PropTypes.string
+      }),
+      createdAt: PropTypes.string.isRequired,
+      updatedAt: PropTypes.string.isRequired
+    })
+  )
 };
 
 export default Chat;

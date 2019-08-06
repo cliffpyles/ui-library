@@ -5,7 +5,10 @@ export default {
   title: "Components|Layout/MediaObject"
 };
 
-const props = {};
+const props = {
+  media: <div>media</div>
+};
+
 export const Default = () => (
   <MediaObject {...props}>
     <div>first</div>
@@ -13,3 +16,33 @@ export const Default = () => (
     <div>third</div>
   </MediaObject>
 );
+
+export const ExtraSmallMediaObject = () => (
+  <MediaObject {...props} hasExtraSmallMedia>
+    <div>content</div>
+  </MediaObject>
+);
+
+ExtraSmallMediaObject.story = {
+  name: "with extra small media"
+};
+
+export const SmallMediaObject = () => (
+  <MediaObject {...props} hasSmallMedia>
+    <div>content</div>
+  </MediaObject>
+);
+
+SmallMediaObject.story = {
+  name: "with small media"
+};
+
+export const LargeMediaObject = () => (
+  <MediaObject {...props} hasLargeMedia>
+    <div>content</div>
+  </MediaObject>
+);
+
+LargeMediaObject.story = {
+  name: "with large media"
+};

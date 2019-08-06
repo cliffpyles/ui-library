@@ -4,7 +4,7 @@
   max-width: 100%;
   display: grid;
   grid-template-columns: 65px 215px auto minmax(min-content, 300px);
-  grid-auto-rows: minmax(150px, auto);
+  grid-template-rows: 70px auto 65px;
 
   &__header {
     grid-column: 3 / 5;

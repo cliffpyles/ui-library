@@ -1,0 +1,16 @@
+.Text {
+  margin: 0;
+  padding: 0;
+  line-height: 1.2;
+  font-size: 1rem;
+
+  &.is-subdued {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  &.is-strong {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+}
