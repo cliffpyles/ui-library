@@ -1,7 +1,7 @@
 import React from "react";
 import Workspace, {
   WorkspaceContext,
-  WorkspaceDetails,
+  WorkspaceDrawer,
   WorkspaceFooter,
   WorkspaceHeader,
   WorkspaceMain,
@@ -12,19 +12,19 @@ export default {
   title: "Components|Layout/Workspace"
 };
 
-export const WithDetails = () => (
-  <Workspace className="has-details">
+export const WithDrawer = () => (
+  <Workspace className="has-drawer">
     <WorkspaceHeader>header</WorkspaceHeader>
     <WorkspaceContext>context</WorkspaceContext>
     <WorkspaceToolbar>toolbar</WorkspaceToolbar>
     <WorkspaceMain>main</WorkspaceMain>
-    <WorkspaceDetails>details</WorkspaceDetails>
+    <WorkspaceDrawer>drawer</WorkspaceDrawer>
     <WorkspaceFooter>footer</WorkspaceFooter>
   </Workspace>
 );
 
-WithDetails.story = {
-  name: "with details"
+WithDrawer.story = {
+  name: "with drawer"
 };
 
 export const ContentInMain = () => (
@@ -118,7 +118,7 @@ ContentInMain.story = {
   name: "content in main"
 };
 
-export const WithoutDetails = () => (
+export const WithoutDrawer = () => (
   <Workspace>
     <WorkspaceContext>context</WorkspaceContext>
     <WorkspaceHeader>header</WorkspaceHeader>
@@ -128,6 +128,6 @@ export const WithoutDetails = () => (
   </Workspace>
 );
 
-WithoutDetails.story = {
-  name: "without details"
+WithoutDrawer.story = {
+  name: "without drawer"
 };

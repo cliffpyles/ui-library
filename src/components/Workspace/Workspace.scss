@@ -22,7 +22,7 @@
     width: 100%;
     justify-self: stretch;
   }
-  &.has-details > &__header {
+  &.has-drawer > &__header {
     grid-column-end: 5;
   }
   &__footer {
@@ -39,7 +39,7 @@
     grid-row: 1 / 4;
     overflow: auto;
   }
-  &__details {
+  &__drawer {
     grid-column: 4;
     grid-row: 2 / 4;
     overflow: auto;

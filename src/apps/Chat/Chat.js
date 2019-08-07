@@ -92,7 +92,6 @@ const Chat = ({
             ]}
           />
         </WorkspaceFooter>
-        {/* <WorkspaceDetails>details</WorkspaceDetails> */}
       </Workspace>
     </div>
   );

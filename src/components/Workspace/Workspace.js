@@ -69,15 +69,15 @@ WorkspaceMain.propTypes = {
   style: PropTypes.object
 };
 
-export const WorkspaceDetails = ({ children, className = "", style = {} }) => {
+export const WorkspaceDrawer = ({ children, className = "", style = {} }) => {
   return (
-    <div className={`Workspace__details ${className}`} style={style}>
+    <div className={`Workspace__drawer ${className}`} style={style}>
       {children}
     </div>
   );
 };
 
-WorkspaceDetails.propTypes = {
+WorkspaceDrawer.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   style: PropTypes.object
