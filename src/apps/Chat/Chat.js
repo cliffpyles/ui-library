@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { IoIosAttach, IoIosAt, IoIosHappy } from "react-icons/io";
 import Workspace, {
   WorkspaceContext,
   WorkspaceDetails,
@@ -71,7 +72,9 @@ const Chat = ({
         <WorkspaceContext>
           <Contexts contexts={contexts} />
         </WorkspaceContext>
-        <WorkspaceHeader>header</WorkspaceHeader>
+        <WorkspaceHeader>
+          <Heading element="h1">{mainHeading}</Heading>
+        </WorkspaceHeader>
         <WorkspaceToolbar>
           <Heading element="h5">Channels</Heading>
           <Channels channels={channels} />
@@ -81,7 +84,14 @@ const Chat = ({
           <Messages messages={messages} />
         </WorkspaceMain>
         <WorkspaceFooter>
-          <InputBar placeholder="Write something…" />
+          <InputBar
+            placeholder="Write something…"
+            leftAttachments={[<IoIosAttach key="upload" />]}
+            rightAttachments={[
+              <IoIosAt key="mention" />,
+              <IoIosHappy key="emoji" />
+            ]}
+          />
         </WorkspaceFooter>
         <WorkspaceDetails>details</WorkspaceDetails>
       </Workspace>
