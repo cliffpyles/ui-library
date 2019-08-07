@@ -15,7 +15,7 @@ const Comment = ({
 }) => {
   const _createdAt = new Date(createdAt);
   const datetimeCreatedAt = _createdAt.toISOString();
-  const formattedCreatedAt = _createdAt.toLocaleString();
+  const formattedCreatedAt = `${_createdAt.toLocaleDateString()} at ${_createdAt.toLocaleTimeString()}`;
 
   return (
     <div className={`Comment ${className}`} style={style}>

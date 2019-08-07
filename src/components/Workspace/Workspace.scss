@@ -4,8 +4,12 @@
   max-width: 100%;
   max-height: 100%;
   display: grid;
-  grid-template-columns: 65px 215px auto minmax(min-content, 300px);
+  // grid-template-columns: 65px 215px auto minmax(min-content, 300px);
+  // grid-auto-columns: minmax(min-content, 300px);
+  grid-auto-columns: minmax(0, 300px);
+  grid-template-columns: 65px 215px auto;
   grid-template-rows: 70px auto 65px;
+  grid-auto-flow: row dense;
 
   &.is-full-screen {
     height: 100vh;
@@ -13,8 +17,13 @@
   }
 
   &__header {
-    grid-column: 3 / 5;
+    grid-column-start: 3;
     grid-row: 1;
+    width: 100%;
+    justify-self: stretch;
+  }
+  &.has-details > &__header {
+    grid-column-end: 5;
   }
   &__footer {
     grid-column: 3;

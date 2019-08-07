@@ -12,25 +12,24 @@ export default {
   title: "Components|Layout/Workspace"
 };
 
-export const Default = () => (
-  <Workspace>
-    <WorkspaceContext>context</WorkspaceContext>
-    <WorkspaceDetails>details</WorkspaceDetails>
+export const WithDetails = () => (
+  <Workspace className="has-details">
     <WorkspaceHeader>header</WorkspaceHeader>
-    <WorkspaceFooter>footer</WorkspaceFooter>
-    <WorkspaceMain>main</WorkspaceMain>
+    <WorkspaceContext>context</WorkspaceContext>
     <WorkspaceToolbar>toolbar</WorkspaceToolbar>
+    <WorkspaceMain>main</WorkspaceMain>
+    <WorkspaceDetails>details</WorkspaceDetails>
+    <WorkspaceFooter>footer</WorkspaceFooter>
   </Workspace>
 );
 
-Default.story = {
-  name: "default"
+WithDetails.story = {
+  name: "with details"
 };
 
 export const ContentInMain = () => (
   <Workspace>
     <WorkspaceContext>context</WorkspaceContext>
-    <WorkspaceDetails>details</WorkspaceDetails>
     <WorkspaceHeader>header</WorkspaceHeader>
     <WorkspaceFooter>footer</WorkspaceFooter>
     <WorkspaceMain>
@@ -117,4 +116,18 @@ export const ContentInMain = () => (
 
 ContentInMain.story = {
   name: "content in main"
+};
+
+export const WithoutDetails = () => (
+  <Workspace>
+    <WorkspaceContext>context</WorkspaceContext>
+    <WorkspaceHeader>header</WorkspaceHeader>
+    <WorkspaceFooter>footer</WorkspaceFooter>
+    <WorkspaceMain>main</WorkspaceMain>
+    <WorkspaceToolbar>toolbar</WorkspaceToolbar>
+  </Workspace>
+);
+
+WithoutDetails.story = {
+  name: "without details"
 };
