@@ -1,0 +1,43 @@
+.InputBar {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: var(--sUnit, 8px) var(--sUnit, 8px);
+  border: var(--InputBar--border, 1px solid currentColor);
+  border-radius: var(--InputBar--border-radius, 4px);
+  background: var(--InputBar--background, #fff);
+  outline: 0;
+  color: var(--InputBar--color, #555);
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background: var(--InputBar--hover--background, #fafafa);
+    color: var(--InputBar--hover--color, #333);
+  }
+
+  &.has-focus {
+    box-shadow: var(
+      --InputBar-has-focus--box-shadow,
+      0px 1px 2px rgba(0, 0, 0, 0.1)
+    );
+  }
+
+  &_input {
+    font-size: var(--InputBar_input--font-size, 1.1rem);
+    display: flex;
+    flex: 1;
+    margin: 0 0.25rem;
+    border-width: 0;
+    background-color: transparent;
+    outline: 0;
+  }
+
+  &__attachments {
+    display: flex;
+    align-items: center;
+  }
+  &__attachments > * {
+    display: block;
+    margin: 0 0.25rem;
+  }
+}
