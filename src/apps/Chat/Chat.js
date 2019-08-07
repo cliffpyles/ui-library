@@ -3,14 +3,12 @@ import PropTypes from "prop-types";
 import { IoIosAttach, IoIosAt, IoIosHappy } from "react-icons/io";
 import Workspace, {
   WorkspaceContext,
-  WorkspaceDetails,
   WorkspaceFooter,
   WorkspaceHeader,
   WorkspaceMain,
   WorkspaceToolbar
 } from "../../components/Workspace";
 import Heading from "../../components/Heading";
-import Column from "../../components/Column";
 import Comment from "../../components/Comment";
 import InputBar from "../../components/InputBar";
 import "./Chat.scss";

@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { format } from "timeago.js";
 import MediaObject from "../MediaObject";
 import Text from "../Text";
 import "./Comment.scss";
