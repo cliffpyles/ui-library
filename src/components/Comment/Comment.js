@@ -15,7 +15,7 @@ const Comment = ({
 }) => {
   const _createdAt = new Date(createdAt);
   const datetimeCreatedAt = _createdAt.toISOString();
-  const formattedCreatedAt = format(_createdAt);
+  const formattedCreatedAt = _createdAt.toLocaleString();
 
   return (
     <div className={`Comment ${className}`} style={style}>
@@ -23,7 +23,7 @@ const Comment = ({
         <div>
           <Text isStrong>{author}</Text>
           <Text isSubdued>
-            <time datetime={datetimeCreatedAt}>{formattedCreatedAt}</time>
+            <time dateTime={datetimeCreatedAt}>{formattedCreatedAt}</time>
           </Text>
         </div>
 

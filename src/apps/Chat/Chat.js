@@ -10,6 +10,7 @@ import Workspace, {
 } from "../../components/Workspace";
 import Heading from "../../components/Heading";
 import Comment from "../../components/Comment";
+import InputBar from "../../components/InputBar";
 import "./Chat.scss";
 
 const Channels = ({ channels = [] }) => {
@@ -66,7 +67,7 @@ const Chat = ({
 }) => {
   return (
     <div className={`Chat ${className}`} style={style}>
-      <Workspace>
+      <Workspace isFullScreen>
         <WorkspaceContext>
           <Contexts contexts={contexts} />
         </WorkspaceContext>
@@ -79,7 +80,9 @@ const Chat = ({
           <Heading element="h2">{mainHeading}</Heading>
           <Messages messages={messages} />
         </WorkspaceMain>
-        <WorkspaceFooter>footer</WorkspaceFooter>
+        <WorkspaceFooter>
+          <InputBar placeholder="Write something…" />
+        </WorkspaceFooter>
         <WorkspaceDetails>details</WorkspaceDetails>
       </Workspace>
     </div>

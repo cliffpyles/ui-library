@@ -16,7 +16,12 @@ function getMockContext() {
     "Marketing",
     "Support"
   ];
-  const messageIds = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  const messageCount = 50;
+  let messageIds = [];
+  for (let index = 0; index < messageCount; index++) {
+    messageIds.push(index + 1);
+  }
+
   const color = "#" + Math.floor(Math.random() * 16777215).toString(16);
   return {
     id: contextId,
@@ -27,12 +32,14 @@ function getMockContext() {
         id: `channel-${channelName.toLowerCase()}`,
         name: channelName,
         messages: messageIds.map(messageId => {
+          const timestampMinute =
+            messageId / 10 < 1 ? `0${messageId}` : messageId;
           return {
             id: `${channelName}-message-${messageId}`,
             body: faker.lorem.sentence(),
             author: faker.helpers.contextualCard(),
-            createdAt: `Sun, 04 Aug 2019 15:2${messageId}:04 GMT`,
-            updatedAt: `Sun, 04 Aug 2019 15:2${messageId}:04 GMT`
+            createdAt: `Sun, 04 Aug 2019 15:${timestampMinute}:04 GMT`,
+            updatedAt: `Sun, 04 Aug 2019 15:${timestampMinute}:04 GMT`
           };
         })
       };
@@ -61,3 +68,7 @@ export const Default = () => (
     {...props}
   />
 );
+
+Default.story = {
+  name: "default"
+};

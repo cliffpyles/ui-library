@@ -1,10 +1,20 @@
 import React from "react";
+import classNames from "classnames";
 import PropTypes from "prop-types";
 import "./Workspace.scss";
 
-const Workspace = ({ children, className = "", style = {} }) => {
+const Workspace = ({
+  children,
+  className = "",
+  style = {},
+  isFullScreen = false
+}) => {
+  const _classNames = classNames({
+    Workspace: true,
+    "is-full-screen": isFullScreen
+  });
   return (
-    <div className={`Workspace ${className}`} style={style}>
+    <div className={`${_classNames} ${className}`} style={style}>
       {children}
     </div>
   );
@@ -13,7 +23,8 @@ const Workspace = ({ children, className = "", style = {} }) => {
 Workspace.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
-  style: PropTypes.object
+  style: PropTypes.object,
+  isFullScreen: PropTypes.bool
 };
 
 export const WorkspaceHeader = ({ children, className = "", style = {} }) => {
