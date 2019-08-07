@@ -1,2 +1,15 @@
 .Chat {
+  &__messages {
+    background: var(--Chat__messages--background, #fff);
+  }
+  &__contexts {
+    height: 100%;
+    background: var(--Chat__contexts--background, #2a2a2a);
+    color: var(--Chat__contexts--color, #fff);
+  }
+  &__channels {
+    height: 100%;
+    background: var(--Chat__channels--background, #3a3a3a);
+    color: var(--Chat__channels--color, #fff);
+  }
 }

@@ -10,13 +10,15 @@ import Workspace, {
   WorkspaceToolbar
 } from "../../components/Workspace";
 import Heading from "../../components/Heading";
+import Column from "../../components/Column";
 import Comment from "../../components/Comment";
 import InputBar from "../../components/InputBar";
 import "./Chat.scss";
 
 const Channels = ({ channels = [] }) => {
   return (
-    <div>
+    <div className="Chat__channels">
+      <Heading element="h5">Channels</Heading>
       {channels.map(channel => {
         return <div key={channel.id}>#{channel.name}</div>;
       })}
@@ -26,7 +28,7 @@ const Channels = ({ channels = [] }) => {
 
 const Contexts = ({ contexts = [] }) => {
   return (
-    <div>
+    <div className="Chat__contexts">
       {contexts.map(context => {
         return <div key={context.id}>{context.image}</div>;
       })}
@@ -36,7 +38,7 @@ const Contexts = ({ contexts = [] }) => {
 
 const Messages = ({ messages = [] }) => {
   return (
-    <div>
+    <div className="Chat__messages">
       {messages.map(message => {
         return (
           <div key={message.id}>
@@ -76,7 +78,6 @@ const Chat = ({
           <Heading element="h1">{mainHeading}</Heading>
         </WorkspaceHeader>
         <WorkspaceToolbar>
-          <Heading element="h5">Channels</Heading>
           <Channels channels={channels} />
         </WorkspaceToolbar>
         <WorkspaceMain>
