@@ -18,7 +18,11 @@ const Channels = ({ channels = [] }) => {
     <div className="Chat__channels">
       <Heading element="h5">Channels</Heading>
       {channels.map(channel => {
-        return <div key={channel.id}>#{channel.name}</div>;
+        return (
+          <div key={channel.id} className="Chat__channel">
+            #{channel.name}
+          </div>
+        );
       })}
     </div>
   );
@@ -39,7 +43,7 @@ const Messages = ({ messages = [] }) => {
     <div className="Chat__messages">
       {messages.map(message => {
         return (
-          <div key={message.id}>
+          <div key={message.id} className="Chat__message">
             <Comment
               author={message.author.name}
               avatar={
@@ -58,10 +62,33 @@ const Messages = ({ messages = [] }) => {
   );
 };
 
+const Header = ({ heading }) => {
+  return (
+    <div className="Chat__header">
+      <Heading element="h1">{heading}</Heading>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="Chat__footer">
+      <InputBar
+        placeholder="Write something…"
+        leftAttachments={[<IoIosAttach key="upload" />]}
+        rightAttachments={[
+          <IoIosAt key="mention" />,
+          <IoIosHappy key="emoji" />
+        ]}
+      />
+    </div>
+  );
+};
+
 const Chat = ({
   className = "",
   style = {},
-  mainHeading,
+  heading,
   channels = [],
   contexts = [],
   messages = []
@@ -73,24 +100,16 @@ const Chat = ({
           <Contexts contexts={contexts} />
         </WorkspaceContext>
         <WorkspaceHeader>
-          <Heading element="h1">{mainHeading}</Heading>
+          <Header heading={heading} />
         </WorkspaceHeader>
         <WorkspaceToolbar>
           <Channels channels={channels} />
         </WorkspaceToolbar>
         <WorkspaceMain>
-          <Heading element="h2">{mainHeading}</Heading>
           <Messages messages={messages} />
         </WorkspaceMain>
         <WorkspaceFooter>
-          <InputBar
-            placeholder="Write something…"
-            leftAttachments={[<IoIosAttach key="upload" />]}
-            rightAttachments={[
-              <IoIosAt key="mention" />,
-              <IoIosHappy key="emoji" />
-            ]}
-          />
+          <Footer />
         </WorkspaceFooter>
       </Workspace>
     </div>
@@ -100,7 +119,7 @@ const Chat = ({
 Chat.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
-  mainHeading: PropTypes.string.isRequired,
+  heading: PropTypes.string.isRequired,
   channels: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,

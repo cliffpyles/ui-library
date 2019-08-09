@@ -25,7 +25,6 @@ const Comment = ({
             <time dateTime={datetimeCreatedAt}>{formattedCreatedAt}</time>
           </Text>
         </div>
-
         <div>{children}</div>
       </MediaObject>
     </div>

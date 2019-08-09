@@ -1,16 +1,24 @@
 .Chat {
+  &__contexts,
+  &__channels,
+  &__header,
+  &__footer,
+  &__messages {
+    padding: 1rem;
+    height: 100%;
+  }
+  &__channel,
+  &__message {
+    margin: 0.5rem 0;
+  }
   &__messages {
     background: var(--Chat__messages--background, #fff);
   }
   &__contexts {
-    padding: 1rem;
-    height: 100%;
     background: var(--Chat__contexts--background, #2a2a2a);
     color: var(--Chat__contexts--color, #fff);
   }
   &__channels {
-    padding: 1rem;
-    height: 100%;
     background: var(--Chat__channels--background, #3a3a3a);
     color: var(--Chat__channels--color, #fff);
   }

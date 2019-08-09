@@ -56,7 +56,7 @@ const contexts = [
 ];
 const channels = contexts[0].channels;
 const messages = contexts[0].channels[0].messages;
-const mainHeading = contexts[0].channels[0].name;
+const heading = contexts[0].channels[0].name;
 const props = {};
 
 export const Default = () => (
@@ -64,7 +64,7 @@ export const Default = () => (
     contexts={contexts}
     channels={channels}
     messages={messages}
-    mainHeading={mainHeading}
+    heading={heading}
     {...props}
   />
 );
