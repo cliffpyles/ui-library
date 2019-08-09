@@ -1,6 +1,40 @@
 .Menu {
   margin: 0;
-  padding: var(--mUnit, 16px);
+  padding: 0;
   line-height: var(--Menu--line-height, 1.2);
   font-size: var(--Menu--font-size, 16px);
+
+  &__items {
+    // padding: var(--sUnit, 8px);
+  }
+  &__item {
+    display: grid;
+    // padding: var(--xsUnit, 4px);
+    grid-template-columns: 16px auto 16px 16px;
+    grid-template-rows: 1fr auto;
+    justify-content: stretch;
+  }
+  &_icon {
+    grid-column: 1;
+  }
+  &_label {
+  }
+  &_indicator {
+    grid-column: 3;
+  }
+  &_action {
+    grid-column: 4;
+  }
+  &__body {
+    grid-column: 1/-1;
+  }
+  &_icon ~ &__body {
+    grid-column: 2/-1;
+  }
+  &__item + &__item {
+    margin-top: var(--mUnit, 8px);
+  }
+  &__items {
+    padding: var(--mUnit, 8px) 0;
+  }
 }

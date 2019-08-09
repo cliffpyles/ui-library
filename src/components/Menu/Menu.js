@@ -1,34 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Heading from "../Heading";
+import Text from "../Text";
 import "./Menu.scss";
 
-function getItemsBySection(items = []) {
-  return items.reduce((accum, item) => {
-    if (!item.section) {
-      return accum;
-    }
-    if (!accum[item.section]) {
-      accum[item.section] = [];
-    }
-
-    return {
-      ...accum,
-      [item.section]: [...accum[item.section], item]
-    };
-  }, {});
-}
-
-const Menu = ({ className = "", style = {}, items = [], sections = [] }) => {
-  const itemsBySection = getItemsBySection(items);
-
+const Menu = ({ className = "", style = {}, items = [] }) => {
   return (
     <div className={`Menu ${className}`} style={style}>
-      {sections.map(section => {
-        return (
-          <MenuSection section={section} items={itemsBySection[section.key]} />
-        );
-      })}
+      <MenuItems items={items} />
     </div>
   );
 };
@@ -38,75 +16,64 @@ Menu.propTypes = {
   style: PropTypes.object,
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      label: PropTypes.string,
-      section: PropTypes.string,
+      label: PropTypes.string.isRequired,
       icon: PropTypes.node,
+      action: PropTypes.node,
       indicator: PropTypes.node,
       url: PropTypes.string,
-      onClick: PropTypes.func
-    })
-  ),
-  sections: PropTypes.arrayOf(
-    PropTypes.shape({
-      key: PropTypes.string,
-      title: PropTypes.string,
-      action: PropTypes.node
+      onClick: PropTypes.func,
+      isTitle: PropTypes.bool,
+      items: PropTypes.arrayOf(
+        PropTypes.shape({
+          label: PropTypes.string.isRequired,
+          icon: PropTypes.node,
+          action: PropTypes.node,
+          indicator: PropTypes.node,
+          url: PropTypes.string,
+          onClick: PropTypes.func,
+          isTitle: PropTypes.bool
+        })
+      )
     })
   )
 };
 
-const MenuSection = ({
-  children,
-  className = "",
-  style = {},
-  items = [],
-  section = {}
-}) => {
+const MenuItems = ({ items }) => {
   return (
-    <div className={`Menu__section ${className}`} style={style}>
-      <div className="Menu__section__header">
-        <Heading element="h6">{section.title}</Heading>
-        {section.action}
-      </div>
-      <div className="Menu__section__items">
-        {items.map(item => {
-          return (
-            <MenuSectionItem
-              key={`${item.section}-${item.label}`}
-              item={item}
-            />
-          );
-        })}
-      </div>
+    <div className="Menu__items">
+      {items.map(item => {
+        return <MenuItem item={item} />;
+      })}
     </div>
   );
 };
 
-const MenuSectionItem = ({
-  children,
-  className = "",
-  style = {},
-  item = {}
-}) => {
-  if (item.url) {
-    return (
-      <div className="Menu__section__item">
-        <a href={item.url}>
-          {item.icon || ""}
-          {item.label}
-        </a>
-        {item.indicator}
-      </div>
-    );
-  }
-
-  return (
-    <div className="Menu__section__item">
-      <button onClick={item.onClick}>
-        {item.icon || ""}
+const MenuItem = ({ children, className = "", style = {}, item = {} }) => {
+  const hasChildren = item.items && item.items.length;
+  const itemLabel =
+    item.url || item.onClick ? (
+      <a className="Menu_label" href={item.url} onClick={item.onClick}>
+        <Text isStrong={item.isTitle}>{item.label}</Text>
+      </a>
+    ) : (
+      <Text className="Menu_label" isStrong={item.isTitle}>
         {item.label}
-      </button>
-      {item.indicator}
+      </Text>
+    );
+  return (
+    <div className={`Menu__item ${className}`} style={style}>
+      {item.icon && <span className="Menu_icon">{item.icon}</span>}
+      {itemLabel}
+      {item.indicator && (
+        <span className="Menu_indicator">{item.indicator}</span>
+      )}
+      {item.action && <span className="Menu_action">{item.action}</span>}
+
+      {hasChildren && (
+        <div className="Menu__body">
+          <MenuItems items={item.items} />
+        </div>
+      )}
     </div>
   );
 };
