@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { IoIosAttach, IoIosAt, IoIosHappy } from "react-icons/io";
+import { IoIosAttach, IoIosAt, IoIosHappy, IoIosAdd } from "react-icons/io";
 import Workspace, {
   WorkspaceContext,
   WorkspaceFooter,
@@ -10,20 +10,25 @@ import Workspace, {
 } from "../../components/Workspace";
 import Heading from "../../components/Heading";
 import Comment from "../../components/Comment";
+import Menu from "../../components/Menu";
 import InputBar from "../../components/InputBar";
 import "./Chat.scss";
 
 const Channels = ({ channels = [] }) => {
   return (
     <div className="Chat__channels">
-      <Heading element="h5">Channels</Heading>
-      {channels.map(channel => {
-        return (
-          <div key={channel.id} className="Chat__channel">
-            #{channel.name}
-          </div>
-        );
-      })}
+      <Menu
+        items={[
+          {
+            label: "Channels",
+            isTitle: true,
+            action: <IoIosAdd height="16px" width="16px" />,
+            items: channels.map(channel => {
+              return { label: `#${channel.name}` };
+            })
+          }
+        ]}
+      />
     </div>
   );
 };
