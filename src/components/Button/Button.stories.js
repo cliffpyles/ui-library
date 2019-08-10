@@ -8,7 +8,9 @@ const actions = {
 };
 
 export default {
-  title: "Components|Interactive/Button"
+  title: "Components|Interactive/Button",
+  component: Button,
+  cliff: [Button]
 };
 
 export const Default = () => <Button {...actions}>button</Button>;

@@ -1,7 +1,7 @@
 export {
   default,
   WorkspaceContext,
-  WorkspaceDetails,
+  WorkspaceDrawer,
   WorkspaceFooter,
   WorkspaceHeader,
   WorkspaceMain,

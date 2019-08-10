@@ -1,8 +1,5 @@
 import React from "react";
-import {
-  IoIosInformation,
-  IoIosInformationCircleOutline
-} from "react-icons/io";
+import { IoIosInformationCircleOutline } from "react-icons/io";
 import Tooltip from "./Tooltip";
 
 export default {

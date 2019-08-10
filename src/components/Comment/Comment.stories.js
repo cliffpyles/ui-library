@@ -9,7 +9,7 @@ export default {
 const user = faker.helpers.contextualCard();
 const props = {
   author: user.username,
-  avatar: <img src={user.avatar} />,
+  avatar: <img src={user.avatar} alt={user.username} />,
   createdAt: `Sun, 04 Aug 2019 15:25:04 GMT`,
   updatedAt: `Sun, 04 Aug 2019 15:25:04 GMT`
 };

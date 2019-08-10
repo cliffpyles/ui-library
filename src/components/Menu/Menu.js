@@ -42,7 +42,7 @@ const MenuItems = ({ items }) => {
   return (
     <div className="Menu__items">
       {items.map(item => {
-        return <MenuItem item={item} />;
+        return <MenuItem key={item.label} item={item} />;
       })}
     </div>
   );
