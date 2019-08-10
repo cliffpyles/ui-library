@@ -7,7 +7,6 @@ addDecorator((storyFn, props) => {
   const results = Array.from(props.kind.matchAll(/(\w*)\|(\w*)\/?(\w*)/g));
   let [result, categoryName, sectionName, storyName] = results[0];
 
-  // props.parameters.component
   return (
     <div
       className={`${categoryName || "Unspecified"}Category ${sectionName ||
