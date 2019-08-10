@@ -9,13 +9,16 @@ body.sb-show-main {
   padding: 0;
   margin: 0;
 }
+.PreviewArea {
+  // background-color: #fff;
+}
 .ComponentsCategory.LayoutSection {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   margin: 2rem;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+  // border: 1px solid rgba(0, 0, 0, 0.1);
   min-height: 75vh;
   font-size: 12px;
   .Bullseye,
@@ -25,7 +28,7 @@ body.sb-show-main {
   .Level,
   .Column,
   .Workspace {
-    border: 7px dashed #2a2a2a;
+    // border: 7px dashed #2a2a2a;
     text-align: center;
   }
   .Bullseye > div,
@@ -35,8 +38,8 @@ body.sb-show-main {
   .Level > div,
   .Column > div,
   .Workspace > div {
-    background: #eaeaea;
-    outline: 1px dashed #cacaca;
+    // background: #eaeaea;
+    // outline: 1px dashed #cacaca;
     padding: 1rem;
     text-align: center;
   }

@@ -1,7 +1,10 @@
 import React from "react";
-import { configure, addDecorator } from "@storybook/react";
+import { configure, addDecorator, addParameters } from "@storybook/react";
+import theme from "./theme";
 import "./styles.scss";
 import "../src/index.css";
+
+addParameters({ options: { theme } });
 
 addDecorator((storyFn, props) => {
   const results = Array.from(props.kind.matchAll(/(\w*)\|(\w*)\/?(\w*)/g));
@@ -9,7 +12,8 @@ addDecorator((storyFn, props) => {
 
   return (
     <div
-      className={`${categoryName || "Unspecified"}Category ${sectionName ||
+      className={`PreviewArea ${categoryName ||
+        "Unspecified"}Category ${sectionName ||
         "Unspecified"}Section ${storyName || sectionName}Story`}
     >
       {storyFn()}
@@ -17,4 +21,7 @@ addDecorator((storyFn, props) => {
   );
 });
 
-configure(require.context("../src", true, /\.stories\.js$/), module);
+configure(
+  require.context("../src", true, /\.stories\.(js|ts|tsx|mdx)$/),
+  module
+);

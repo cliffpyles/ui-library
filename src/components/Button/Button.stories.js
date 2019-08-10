@@ -9,11 +9,7 @@ const actions = {
 
 export default {
   title: "Components|Interactive/Button",
-  component: {
-    module: Button,
-    name: "Button",
-    docs: null
-  }
+  component: Button
 };
 
 export const Default = () => <Button {...actions}>button</Button>;
