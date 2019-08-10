@@ -2,7 +2,7 @@ import React from "react";
 import Comment from "./Comment";
 
 export default {
-  title: "Components|Structure/Comment"
+  title: "Components|Content/Comment"
 };
 
 const props = {
