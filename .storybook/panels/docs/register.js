@@ -38,7 +38,8 @@ class MyPanel extends React.Component {
 
   render() {
     const { value } = this.state;
-    const { active } = this.props;
+    const { active, component } = this.props;
+
     return active ? <div>{value}</div> : null;
   }
 }
@@ -50,12 +51,14 @@ addons.register(ADDON_ID, api => {
     type: types.PANEL,
     title,
     render: ({ active }) => {
+      const currentParam = api.getCurrentParameter() || {};
       return (
         <MyPanel
           key={ADDON_ID}
           channel={addons.getChannel()}
           api={api}
           active={active}
+          component={currentParam.component}
         />
       );
     }

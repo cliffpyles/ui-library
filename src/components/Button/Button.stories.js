@@ -9,8 +9,11 @@ const actions = {
 
 export default {
   title: "Components|Interactive/Button",
-  component: Button,
-  cliff: [Button]
+  component: {
+    module: Button,
+    name: "Button",
+    docs: null
+  }
 };
 
 export const Default = () => <Button {...actions}>button</Button>;
