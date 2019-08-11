@@ -1,23 +1,35 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
+
 import "./Button.scss";
 
-const Button = ({ children, className, onClick }) => {
+/** Triggers an action on when pressed */
+const Button = ({ children, className, onClick, icon, isUnstyled }) => {
+  const _className = classNames({
+    Button: true,
+    "is-icon": icon,
+    "is-unstyled": isUnstyled,
+    [`${className}`]: true
+  });
   return (
-    <button className={`Button ${className}`} onClick={onClick}>
-      {children}
+    <button className={_className} onClick={onClick}>
+      {icon || children}
     </button>
   );
 };
 
 Button.defaultProps = {
-  className: " "
+  className: "",
+  isUnstyled: false
 };
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
   className: PropTypes.string,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func,
+  icon: PropTypes.node,
+  isUnstyled: PropTypes.bool
 };
 
 export default Button;
