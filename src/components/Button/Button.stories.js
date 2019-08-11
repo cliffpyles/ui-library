@@ -23,10 +23,7 @@ export const ButtonWithIcon = () => (
 );
 
 ButtonWithIcon.story = {
-  name: "with icon",
-  parameters: {
-    notes: "an icon only button"
-  }
+  name: "with icon"
 };
 
 export const ButtonUnstyled = () => (
