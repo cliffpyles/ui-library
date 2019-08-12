@@ -7,23 +7,10 @@
   --honeyDew: #f1faee;
   --desire: #e63946;
 }
-
-/* #root {
-  display: block;
-  position: fixed;
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-  background: var(--spaceCadet);
+/* #root .sidebar-svg-icon {
+  color: var(--queenBlue);
 }
 
-#root .simplebar-content {
-  background: var(--spaceCadet);
-  color: var(--honeyDew);
-}
 #root .sidebar-subheading {
-  color: var(--honeyDew);
-}
-#root .sidebar-item {
-  color: var(--honeyDew);
+  color: var(--spaceCadet);
 } */
