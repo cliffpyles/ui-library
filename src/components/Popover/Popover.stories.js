@@ -53,6 +53,7 @@ PopoverDefault.story = {
   name: "default",
   decorators: [withKnobs],
   parameters: {
-    notes: ""
+    notes:
+      "Displays content that can be shown and hidden when a user clicks on a icon"
   }
 };
