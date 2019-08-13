@@ -5,24 +5,15 @@ import InputBar from "../InputBar";
 import { ReactComponent as Attachment } from "./icons/attachment.svg";
 
 export default {
-  title: "Components|Interactive/InputBar"
+  title: "Components|Interactive/InputBar",
+  component: InputBar
 };
 
 const props = {
   onChange: action("onChange"),
   onFocus: action("onFocus"),
   onBlur: action("onBlur"),
-  placeholder: "Enter something…"
-};
-
-export const Default = () => <InputBar {...props} />;
-
-Default.story = {
-  name: "default"
-};
-
-const withAttachmentsProps = {
-  ...props,
+  placeholder: "Enter something…",
   leftAttachments: [
     <Attachment key="left-1" height="16px" width="16px" />,
     <Attachment key="left-2" height="16px" width="16px" />
@@ -32,8 +23,13 @@ const withAttachmentsProps = {
     <Attachment key="right-2" height="16px" width="16px" />
   ]
 };
-export const WithAttachments = () => <InputBar {...withAttachmentsProps} />;
 
-WithAttachments.story = {
-  name: "with attachments"
+export const InputBarDefault = () => <InputBar {...props} />;
+
+InputBarDefault.story = {
+  name: "default",
+  parameters: {
+    notes:
+      "Accepts user input and triggers actions from the user via keyboard and mouse interactions"
+  }
 };

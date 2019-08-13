@@ -33,7 +33,7 @@ const InputBar = ({
   };
 
   return (
-    <div className={`${_classNames} ${className}`}>
+    <div className={`${_classNames} ${className}`} style={style}>
       <div className="InputBar__attachments">{leftAttachments}</div>
       <input
         className="InputBar_input"
@@ -42,7 +42,6 @@ const InputBar = ({
         onChange={onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
-        style={style}
         value={value}
         type={type}
         placeholder={placeholder}
