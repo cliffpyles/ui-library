@@ -1,0 +1,52 @@
+.Popover {
+  position: relative;
+  display: inline-block;
+
+  &__toggle {
+    display: inline-block;
+  }
+
+  &__main {
+    font-size: var(--Popover__main--font-size, 0.75rem);
+    position: absolute;
+    // max-width: var(--Popover__main--width, 12em);
+    display: block;
+    white-space: nowrap;
+    padding: var(--sUnit, 8px);
+    margin: 0;
+    left: 0;
+    bottom: 100%;
+    height: 0;
+    border: var(--Popover__main--border, 0px solid currentColor);
+    border-radius: var(--Popover__main--border-radius, 4px);
+    background: var(--Popover__main--background, #333333aa);
+    color: var(--Popover__main--color, #fff);
+    opacity: 0;
+  }
+
+  &.is-toggled > &__main {
+    opacity: 1;
+    height: auto;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  &.is-left > &__main {
+    left: auto;
+    right: 0;
+  }
+
+  &.is-right > &__main {
+    right: auto;
+    left: 0;
+  }
+
+  &.is-top > &__main {
+    top: auto;
+    bottom: 100%;
+  }
+
+  &.is-bottom > &__main {
+    bottom: auto;
+    top: 100%;
+  }
+}
