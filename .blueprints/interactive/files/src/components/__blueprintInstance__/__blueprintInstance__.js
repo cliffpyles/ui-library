@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import './{{blueprintInstance}}.scss';
 
 const {{blueprintInstance}} = ({ children, className = '', onClick, style = {} }) => {
-  return <{{div}} className={`{{blueprintInstance}} ${className}`} onClick={onClick} style={style}>{children}</{{div}}>;
+  return <div className={`{{blueprintInstance}} ${className}`} onClick={onClick} style={style}>{children}</div>;
 };
 
 {{blueprintInstance}}.propTypes = {
