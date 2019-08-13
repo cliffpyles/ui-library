@@ -1,7 +1,0 @@
-.{{blueprintInstance}} {
-  padding: var(--mUnit, 16px);
-  border: var(--{{blueprintInstance}}--border, 1px solid #ccc);
-  border-radius: var(--{{blueprintInstance}}--border-radius, 4px);
-  background: var(--{{blueprintInstance}}--background, #fff);
-  box-shadow: var(--{{blueprintInstance}}--box-shadow, 0px 1px 2px rgba(0, 0, 0, 0.1));
-}
