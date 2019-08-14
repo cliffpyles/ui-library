@@ -3,7 +3,8 @@ import { IoIosAddCircle, IoIosBriefcase, IoIosBusiness } from "react-icons/io";
 import Menu from "./Menu";
 
 export default {
-  title: "Components|Content/Menu"
+  title: "Components|Content/Menu",
+  component: Menu
 };
 
 const defaultStoryProps = {
