@@ -27,14 +27,15 @@ export const PopoverDefault = () => {
   );
 
   const isPositionedProps = {
-    [horizontalPosition]: true,
+    // [horizontalPosition]: true,
+    isLeft: true,
     [verticalPosition]: true,
     isAdaptable: true,
     toggle: <IoIosInformationCircleOutline size="24px" />
   };
 
   return (
-    <Popover {...isPositionedProps}>
+    <Popover {...isPositionedProps} isToggled>
       <p>
         Adipisicing laborum pariatur ex exercitation. In consequat aute
         voluptate in ut. Tempor sunt aliqua ea do incididunt ut. Qui minim
